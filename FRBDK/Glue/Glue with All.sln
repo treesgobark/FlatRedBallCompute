@@ -89,6 +89,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CompileAndEditMode", "Compi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompilerLibrary", "CompilerLibrary\CompilerLibrary.csproj", "{731481FE-AA6C-4282-8059-94D98873CEED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsepriteToAchx", "AsepriteToAchx\AsepriteToAchx.csproj", "{3E36CFF6-E031-49BA-A050-1E2FAE6095D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -215,6 +217,10 @@ Global
 		{731481FE-AA6C-4282-8059-94D98873CEED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{731481FE-AA6C-4282-8059-94D98873CEED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{731481FE-AA6C-4282-8059-94D98873CEED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E36CFF6-E031-49BA-A050-1E2FAE6095D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E36CFF6-E031-49BA-A050-1E2FAE6095D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E36CFF6-E031-49BA-A050-1E2FAE6095D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E36CFF6-E031-49BA-A050-1E2FAE6095D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

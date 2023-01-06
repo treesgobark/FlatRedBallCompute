@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AnimationChainArraySave xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FileRelativeTextures>true</FileRelativeTextures>
+  <TimeMeasurementUnit>Undefined</TimeMeasurementUnit>
+  <CoordinateType>Pixel</CoordinateType>
+  <AnimationChain>
+    <Name>IdleRight</Name>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.1</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>48</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>48</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+  <AnimationChain>
+    <Name>IdleLeft</Name>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.1</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>48</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>48</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+  <AnimationChain>
+    <Name>FallingRight</Name>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.1</FrameLength>
+      <LeftCoordinate>48</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>48</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+  <AnimationChain>
+    <Name>FallingLeft</Name>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.1</FrameLength>
+      <LeftCoordinate>48</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>0</TopCoordinate>
+      <BottomCoordinate>48</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+  <AnimationChain>
+    <Name>WalkStride1Right</Name>
+    <Frame>
+      <TextureName>RobotSheetIdleWalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>48</RightCoordinate>
+      <TopCoordinate>48</TopCoordinate>
+      <BottomCoordinate>96</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>48</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>48</TopCoordinate>
+      <BottomCoordinate>96</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>96</LeftCoordinate>
+      <RightCoordinate>144</RightCoordinate>
+      <TopCoordinate>48</TopCoordinate>
+      <BottomCoordinate>96</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>144</LeftCoordinate>
+      <RightCoordinate>192</RightCoordinate>
+      <TopCoordinate>48</TopCoordinate>
+      <BottomCoordinate>96</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>96</LeftCoordinate>
+      <RightCoordinate>144</RightCoordinate>
+      <TopCoordinate>48</TopCoordinate>
+      <BottomCoordinate>96</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>48</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>48</TopCoordinate>
+      <BottomCoordinate>96</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+  <AnimationChain>
+    <Name>WalkStride1Left</Name>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>RobotSheetIdleWalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>48</RightCoordinate>
+      <TopCoordinate>48</TopCoordinate>
+      <BottomCoordinate>96</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>48</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>48</TopCoordinate>
+      <BottomCoordinate>96</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>96</LeftCoordinate>
+      <RightCoordinate>144</RightCoordinate>
+      <TopCoordinate>48</TopCoordinate>
+      <BottomCoordinate>96</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>144</LeftCoordinate>
+      <RightCoordinate>192</RightCoordinate>
+      <TopCoordinate>48</TopCoordinate>
+      <BottomCoordinate>96</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>96</LeftCoordinate>
+      <RightCoordinate>144</RightCoordinate>
+      <TopCoordinate>48</TopCoordinate>
+      <BottomCoordinate>96</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>48</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>48</TopCoordinate>
+      <BottomCoordinate>96</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+  <AnimationChain>
+    <Name>WalkStride2Right</Name>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>48</RightCoordinate>
+      <TopCoordinate>96</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>48</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>96</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>96</LeftCoordinate>
+      <RightCoordinate>144</RightCoordinate>
+      <TopCoordinate>96</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>144</LeftCoordinate>
+      <RightCoordinate>192</RightCoordinate>
+      <TopCoordinate>96</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>192</LeftCoordinate>
+      <RightCoordinate>240</RightCoordinate>
+      <TopCoordinate>96</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>144</LeftCoordinate>
+      <RightCoordinate>192</RightCoordinate>
+      <TopCoordinate>96</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>96</LeftCoordinate>
+      <RightCoordinate>144</RightCoordinate>
+      <TopCoordinate>96</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>48</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>96</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+  <AnimationChain>
+    <Name>WalkStride2Left</Name>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>48</RightCoordinate>
+      <TopCoordinate>96</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>48</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>96</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>96</LeftCoordinate>
+      <RightCoordinate>144</RightCoordinate>
+      <TopCoordinate>96</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>144</LeftCoordinate>
+      <RightCoordinate>192</RightCoordinate>
+      <TopCoordinate>96</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>192</LeftCoordinate>
+      <RightCoordinate>240</RightCoordinate>
+      <TopCoordinate>96</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>144</LeftCoordinate>
+      <RightCoordinate>192</RightCoordinate>
+      <TopCoordinate>96</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>96</LeftCoordinate>
+      <RightCoordinate>144</RightCoordinate>
+      <TopCoordinate>96</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>48</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>96</TopCoordinate>
+      <BottomCoordinate>144</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+  <AnimationChain>
+    <Name>KickRight</Name>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.05</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>48</RightCoordinate>
+      <TopCoordinate>192</TopCoordinate>
+      <BottomCoordinate>240</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.05</FrameLength>
+      <LeftCoordinate>48</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>192</TopCoordinate>
+      <BottomCoordinate>240</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>96</LeftCoordinate>
+      <RightCoordinate>144</RightCoordinate>
+      <TopCoordinate>192</TopCoordinate>
+      <BottomCoordinate>240</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves>
+          <AxisAlignedRectangleSave>
+            <X>17</X>
+            <Y>-5.5</Y>
+            <Z>0</Z>
+            <ScaleX>4</ScaleX>
+            <ScaleY>1.5</ScaleY>
+            <Name>KickHitbox</Name>
+            <Alpha>1</Alpha>
+            <Red>1</Red>
+            <Green>1</Green>
+            <Blue>1</Blue>
+          </AxisAlignedRectangleSave>
+        </AxisAlignedRectangleSaves>
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.1</FrameLength>
+      <LeftCoordinate>48</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>192</TopCoordinate>
+      <BottomCoordinate>240</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+  <AnimationChain>
+    <Name>KickLeft</Name>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.05</FrameLength>
+      <LeftCoordinate>0</LeftCoordinate>
+      <RightCoordinate>48</RightCoordinate>
+      <TopCoordinate>192</TopCoordinate>
+      <BottomCoordinate>240</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.05</FrameLength>
+      <LeftCoordinate>48</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>192</TopCoordinate>
+      <BottomCoordinate>240</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.2</FrameLength>
+      <LeftCoordinate>96</LeftCoordinate>
+      <RightCoordinate>144</RightCoordinate>
+      <TopCoordinate>192</TopCoordinate>
+      <BottomCoordinate>240</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves>
+          <AxisAlignedRectangleSave>
+            <X>-17</X>
+            <Y>-5.5</Y>
+            <Z>0</Z>
+            <ScaleX>4</ScaleX>
+            <ScaleY>1.5</ScaleY>
+            <Name>KickHitbox</Name>
+            <Alpha>1</Alpha>
+            <Red>1</Red>
+            <Green>1</Green>
+            <Blue>1</Blue>
+          </AxisAlignedRectangleSave>
+        </AxisAlignedRectangleSaves>
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>robotsheetidlewalk2.png</TextureName>
+      <FrameLength>0.1</FrameLength>
+      <LeftCoordinate>48</LeftCoordinate>
+      <RightCoordinate>96</RightCoordinate>
+      <TopCoordinate>192</TopCoordinate>
+      <BottomCoordinate>240</BottomCoordinate>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves />
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+  </AnimationChain>
+</AnimationChainArraySave>
