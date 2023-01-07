@@ -45,13 +45,12 @@ public static class Mapper
     }
 
     public static AnimationChainListSave MapWithCollision(AsepriteSheetData sheet,
-        CollisionImporter collisionImporter,
         AsepriteFile asepriteFile,
         bool generateMirrors = true,
         bool applyAnimationDirection = true)
     {
         AnimationChainListSave chainList = Map(sheet, false, false);
-        collisionImporter.SetFrameCollisionForChainList(chainList, sheet, asepriteFile);
+        CollisionImporter.SetFrameCollisionForChainList(chainList, sheet, asepriteFile);
 
         if (applyAnimationDirection)
         {
