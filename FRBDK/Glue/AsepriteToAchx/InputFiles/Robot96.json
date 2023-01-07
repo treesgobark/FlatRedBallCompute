@@ -1,379 +1,379 @@
 { "frames": [
    {
     "filename": "Robot96.aseprite#Combat Ready Right[0]",
-    "frame": { "x": 0, "y": 0, "w": 56, "h": 69 },
+    "frame": { "x": 28, "y": 279, "w": 22, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 22, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Jab Right[1]",
-    "frame": { "x": 56, "y": 0, "w": 56, "h": 69 },
+    "frame": { "x": 277, "y": 209, "w": 22, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 22, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Jab Right[2]",
-    "frame": { "x": 112, "y": 0, "w": 56, "h": 69 },
+    "frame": { "x": 181, "y": 210, "w": 23, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 23, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Jab Right[3]",
-    "frame": { "x": 168, "y": 0, "w": 56, "h": 69 },
+    "frame": { "x": 28, "y": 210, "w": 26, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 26, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Jab Right[4]",
-    "frame": { "x": 224, "y": 0, "w": 56, "h": 69 },
+    "frame": { "x": 1, "y": 141, "w": 32, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 32, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Jab Right[5]",
-    "frame": { "x": 280, "y": 0, "w": 56, "h": 69 },
+    "frame": { "x": 179, "y": 71, "w": 39, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 39, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Jab Right[6]",
-    "frame": { "x": 280, "y": 0, "w": 56, "h": 69 },
+    "frame": { "x": 219, "y": 71, "w": 39, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 39, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Jab Right[7]",
-    "frame": { "x": 336, "y": 0, "w": 56, "h": 69 },
+    "frame": { "x": 259, "y": 71, "w": 39, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 39, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Jab Right[8]",
-    "frame": { "x": 0, "y": 69, "w": 56, "h": 69 },
+    "frame": { "x": 249, "y": 140, "w": 33, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 33, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Jab Right[9]",
-    "frame": { "x": 56, "y": 69, "w": 56, "h": 69 },
+    "frame": { "x": 67, "y": 141, "w": 31, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 31, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Jab Right[10]",
-    "frame": { "x": 112, "y": 69, "w": 56, "h": 69 },
+    "frame": { "x": 129, "y": 141, "w": 28, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 28, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Jab Right[11]",
-    "frame": { "x": 168, "y": 69, "w": 56, "h": 69 },
+    "frame": { "x": 249, "y": 209, "w": 27, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 27, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Jab Right[12]",
-    "frame": { "x": 224, "y": 69, "w": 56, "h": 69 },
+    "frame": { "x": 55, "y": 210, "w": 25, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 25, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Jab Right[13]",
-    "frame": { "x": 280, "y": 69, "w": 56, "h": 69 },
+    "frame": { "x": 132, "y": 210, "w": 24, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 24, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Jab Right[14]",
-    "frame": { "x": 336, "y": 69, "w": 56, "h": 69 },
+    "frame": { "x": 205, "y": 210, "w": 23, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 23, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Jab Right[15]",
-    "frame": { "x": 0, "y": 138, "w": 56, "h": 69 },
+    "frame": { "x": 229, "y": 278, "w": 22, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 22, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Jab Right[16]",
-    "frame": { "x": 56, "y": 138, "w": 56, "h": 69 },
+    "frame": { "x": 252, "y": 278, "w": 22, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 22, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[17]",
-    "frame": { "x": 0, "y": 0, "w": 56, "h": 69 },
+    "frame": { "x": 28, "y": 279, "w": 22, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 22, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[18]",
-    "frame": { "x": 112, "y": 138, "w": 56, "h": 69 },
+    "frame": { "x": 74, "y": 279, "w": 21, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 42, "y": 28, "w": 21, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[19]",
-    "frame": { "x": 168, "y": 138, "w": 56, "h": 69 },
+    "frame": { "x": 158, "y": 141, "w": 21, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 42, "y": 28, "w": 21, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[20]",
-    "frame": { "x": 224, "y": 138, "w": 56, "h": 69 },
+    "frame": { "x": 275, "y": 278, "w": 22, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 42, "y": 28, "w": 22, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[21]",
-    "frame": { "x": 280, "y": 138, "w": 56, "h": 69 },
+    "frame": { "x": 157, "y": 210, "w": 23, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 43, "y": 28, "w": 23, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[22]",
-    "frame": { "x": 336, "y": 138, "w": 56, "h": 69 },
+    "frame": { "x": 107, "y": 210, "w": 24, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 44, "y": 28, "w": 24, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[23]",
-    "frame": { "x": 0, "y": 207, "w": 56, "h": 69 },
+    "frame": { "x": 1, "y": 210, "w": 26, "h": 69 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 45, "y": 27, "w": 26, "h": 69 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[24]",
-    "frame": { "x": 56, "y": 207, "w": 56, "h": 69 },
+    "frame": { "x": 215, "y": 140, "w": 33, "h": 69 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 45, "y": 27, "w": 33, "h": 69 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[25]",
-    "frame": { "x": 112, "y": 207, "w": 56, "h": 69 },
+    "frame": { "x": 95, "y": 71, "w": 42, "h": 69 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 46, "y": 27, "w": 42, "h": 69 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[26]",
-    "frame": { "x": 168, "y": 207, "w": 56, "h": 69 },
+    "frame": { "x": 1, "y": 1, "w": 50, "h": 69 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 46, "y": 27, "w": 50, "h": 69 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[27]",
-    "frame": { "x": 224, "y": 207, "w": 56, "h": 69 },
+    "frame": { "x": 52, "y": 1, "w": 49, "h": 69 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 47, "y": 27, "w": 49, "h": 69 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[28]",
-    "frame": { "x": 280, "y": 207, "w": 56, "h": 69 },
+    "frame": { "x": 102, "y": 1, "w": 49, "h": 69 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 47, "y": 27, "w": 49, "h": 69 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[29]",
-    "frame": { "x": 336, "y": 207, "w": 56, "h": 69 },
+    "frame": { "x": 152, "y": 1, "w": 49, "h": 69 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 47, "y": 27, "w": 49, "h": 69 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[30]",
-    "frame": { "x": 0, "y": 276, "w": 56, "h": 69 },
+    "frame": { "x": 202, "y": 1, "w": 49, "h": 69 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 47, "y": 27, "w": 49, "h": 69 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[31]",
-    "frame": { "x": 56, "y": 276, "w": 56, "h": 69 },
+    "frame": { "x": 1, "y": 71, "w": 49, "h": 69 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 47, "y": 27, "w": 49, "h": 69 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[32]",
-    "frame": { "x": 112, "y": 276, "w": 56, "h": 69 },
+    "frame": { "x": 252, "y": 1, "w": 47, "h": 69 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 46, "y": 27, "w": 47, "h": 69 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[33]",
-    "frame": { "x": 168, "y": 276, "w": 56, "h": 69 },
+    "frame": { "x": 51, "y": 71, "w": 43, "h": 69 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 45, "y": 27, "w": 43, "h": 69 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[34]",
-    "frame": { "x": 224, "y": 276, "w": 56, "h": 69 },
+    "frame": { "x": 138, "y": 71, "w": 40, "h": 69 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 44, "y": 27, "w": 40, "h": 69 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[35]",
-    "frame": { "x": 280, "y": 276, "w": 56, "h": 69 },
+    "frame": { "x": 179, "y": 140, "w": 35, "h": 69 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 44, "y": 27, "w": 35, "h": 69 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[36]",
-    "frame": { "x": 336, "y": 276, "w": 56, "h": 69 },
+    "frame": { "x": 34, "y": 141, "w": 32, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 43, "y": 28, "w": 32, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[37]",
-    "frame": { "x": 0, "y": 345, "w": 56, "h": 69 },
+    "frame": { "x": 99, "y": 141, "w": 29, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 42, "y": 28, "w": 29, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[38]",
-    "frame": { "x": 56, "y": 345, "w": 56, "h": 69 },
+    "frame": { "x": 81, "y": 210, "w": 25, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 42, "y": 28, "w": 25, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[39]",
-    "frame": { "x": 112, "y": 345, "w": 56, "h": 69 },
+    "frame": { "x": 51, "y": 279, "w": 22, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 42, "y": 28, "w": 22, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[40]",
-    "frame": { "x": 168, "y": 345, "w": 56, "h": 69 },
+    "frame": { "x": 96, "y": 279, "w": 21, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 42, "y": 28, "w": 21, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    },
    {
     "filename": "Robot96.aseprite#Cross Right[41]",
-    "frame": { "x": 0, "y": 0, "w": 56, "h": 69 },
+    "frame": { "x": 28, "y": 279, "w": 22, "h": 68 },
     "rotated": false,
     "trimmed": true,
-    "spriteSourceSize": { "x": 27, "y": 27, "w": 56, "h": 69 },
+    "spriteSourceSize": { "x": 41, "y": 28, "w": 22, "h": 68 },
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 23
    }
@@ -383,7 +383,7 @@
   "version": "1.3-beta10-dev",
   "image": "Robot96.png",
   "format": "RGBA8888",
-  "size": { "w": 392, "h": 414 },
+  "size": { "w": 299, "h": 347 },
   "scale": "1",
   "frameTags": [
    { "name": "Combat Ready Right", "from": 0, "to": 0, "direction": "forward", "color": "#000000ff" },
@@ -391,8 +391,8 @@
    { "name": "Cross Right", "from": 17, "to": 41, "direction": "forward", "color": "#000000ff" }
   ],
   "layers": [
-   { "name": "Body", "opacity": 255, "blendMode": "normal" },
-   { "name": "Smear", "opacity": 255, "blendMode": "normal" }
+   { "name": "Smear", "opacity": 255, "blendMode": "normal" },
+   { "name": "Body", "opacity": 255, "blendMode": "normal" }
   ],
   "slices": [
   ]

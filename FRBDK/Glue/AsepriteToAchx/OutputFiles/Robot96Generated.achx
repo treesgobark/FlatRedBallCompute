@@ -8,19 +8,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>0</LeftCoordinate>
-      <RightCoordinate>56</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>28</LeftCoordinate>
+      <RightCoordinate>50</RightCoordinate>
+      <TopCoordinate>279</TopCoordinate>
+      <BottomCoordinate>347</BottomCoordinate>
+      <RelativeX>4</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-17.5</X>
-            <Y>-0.5</Y>
+            <X>3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -40,19 +42,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>0</LeftCoordinate>
-      <RightCoordinate>56</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>28</LeftCoordinate>
+      <RightCoordinate>50</RightCoordinate>
+      <TopCoordinate>279</TopCoordinate>
+      <BottomCoordinate>347</BottomCoordinate>
+      <RelativeX>-4</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>17.5</X>
-            <Y>-0.5</Y>
+            <X>-3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -71,19 +75,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>56</LeftCoordinate>
-      <RightCoordinate>112</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>277</LeftCoordinate>
+      <RightCoordinate>299</RightCoordinate>
+      <TopCoordinate>209</TopCoordinate>
+      <BottomCoordinate>277</BottomCoordinate>
+      <RelativeX>4</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-17.5</X>
-            <Y>-0.5</Y>
+            <X>3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -99,19 +105,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>112</LeftCoordinate>
-      <RightCoordinate>168</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>181</LeftCoordinate>
+      <RightCoordinate>204</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>278</BottomCoordinate>
+      <RelativeX>4.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-16.5</X>
-            <Y>-0.5</Y>
+            <X>4.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -127,19 +135,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>168</LeftCoordinate>
-      <RightCoordinate>224</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>28</LeftCoordinate>
+      <RightCoordinate>54</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>278</BottomCoordinate>
+      <RelativeX>6</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-16.5</X>
-            <Y>-0.5</Y>
+            <X>4.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -155,31 +165,33 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>224</LeftCoordinate>
-      <RightCoordinate>280</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>1</LeftCoordinate>
+      <RightCoordinate>33</RightCoordinate>
+      <TopCoordinate>141</TopCoordinate>
+      <BottomCoordinate>209</BottomCoordinate>
+      <RelativeX>9</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>1.5</X>
-            <Y>22</Y>
+            <X>22.5</X>
+            <Y>8.5</Y>
             <Z>0</Z>
             <ScaleX>2.5</ScaleX>
             <ScaleY>2.5</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0.54509807</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>-15.5</X>
-            <Y>-0.5</Y>
+            <X>5.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -195,31 +207,33 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>280</LeftCoordinate>
-      <RightCoordinate>336</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>179</LeftCoordinate>
+      <RightCoordinate>218</RightCoordinate>
+      <TopCoordinate>71</TopCoordinate>
+      <BottomCoordinate>139</BottomCoordinate>
+      <RelativeX>12.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>7</X>
-            <Y>23.5</Y>
+            <X>28</X>
+            <Y>10</Y>
             <Z>0</Z>
             <ScaleX>4</ScaleX>
             <ScaleY>2</ScaleY>
-            <Name>PrimaryHurtbox</Name>
+            <Name>PrimaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>-15.5</X>
-            <Y>-0.5</Y>
+            <X>5.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -235,31 +249,33 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>280</LeftCoordinate>
-      <RightCoordinate>336</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>219</LeftCoordinate>
+      <RightCoordinate>258</RightCoordinate>
+      <TopCoordinate>71</TopCoordinate>
+      <BottomCoordinate>139</BottomCoordinate>
+      <RelativeX>12.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>7</X>
-            <Y>23.5</Y>
+            <X>28</X>
+            <Y>10</Y>
             <Z>0</Z>
             <ScaleX>4</ScaleX>
             <ScaleY>2</ScaleY>
-            <Name>PrimaryHurtbox</Name>
+            <Name>PrimaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>-15.5</X>
-            <Y>-0.5</Y>
+            <X>5.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -275,31 +291,63 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>336</LeftCoordinate>
-      <RightCoordinate>392</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>259</LeftCoordinate>
+      <RightCoordinate>298</RightCoordinate>
+      <TopCoordinate>71</TopCoordinate>
+      <BottomCoordinate>139</BottomCoordinate>
+      <RelativeX>12.5</RelativeX>
+      <RelativeY>-14</RelativeY>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves>
+          <AxisAlignedRectangleSave>
+            <X>26.5</X>
+            <Y>9.5</Y>
+            <Z>0</Z>
+            <ScaleX>2.5</ScaleX>
+            <ScaleY>2.5</ScaleY>
+            <Name>SecondaryHitbox</Name>
+            <Alpha>1</Alpha>
+            <Red>1</Red>
+            <Green>0.54509807</Green>
+            <Blue>0</Blue>
+          </AxisAlignedRectangleSave>
+          <AxisAlignedRectangleSave>
+            <X>5.5</X>
+            <Y>-14</Y>
+            <Z>0</Z>
+            <ScaleX>9.5</ScaleX>
+            <ScaleY>34</ScaleY>
+            <Name>SolidBounds</Name>
+            <Alpha>1</Alpha>
+            <Red>0.9372549</Red>
+            <Green>0.9254902</Green>
+            <Blue>1</Blue>
+          </AxisAlignedRectangleSave>
+        </AxisAlignedRectangleSaves>
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <TextureName>Robot96.png</TextureName>
+      <FrameLength>0.023</FrameLength>
+      <LeftCoordinate>249</LeftCoordinate>
+      <RightCoordinate>282</RightCoordinate>
+      <TopCoordinate>140</TopCoordinate>
+      <BottomCoordinate>208</BottomCoordinate>
+      <RelativeX>9.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
             <X>5.5</X>
-            <Y>23</Y>
-            <Z>0</Z>
-            <ScaleX>2.5</ScaleX>
-            <ScaleY>2.5</ScaleY>
-            <Name>SecondaryHurtbox</Name>
-            <Alpha>1</Alpha>
-            <Red>1</Red>
-            <Green>0.54509807</Green>
-            <Blue>0</Blue>
-          </AxisAlignedRectangleSave>
-          <AxisAlignedRectangleSave>
-            <X>-15.5</X>
-            <Y>-0.5</Y>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -315,19 +363,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>0</LeftCoordinate>
-      <RightCoordinate>56</RightCoordinate>
-      <TopCoordinate>69</TopCoordinate>
-      <BottomCoordinate>138</BottomCoordinate>
+      <LeftCoordinate>67</LeftCoordinate>
+      <RightCoordinate>98</RightCoordinate>
+      <TopCoordinate>141</TopCoordinate>
+      <BottomCoordinate>209</BottomCoordinate>
+      <RelativeX>8.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-15.5</X>
-            <Y>-0.5</Y>
+            <X>5.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -343,19 +393,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>56</LeftCoordinate>
-      <RightCoordinate>112</RightCoordinate>
-      <TopCoordinate>69</TopCoordinate>
-      <BottomCoordinate>138</BottomCoordinate>
+      <LeftCoordinate>129</LeftCoordinate>
+      <RightCoordinate>157</RightCoordinate>
+      <TopCoordinate>141</TopCoordinate>
+      <BottomCoordinate>209</BottomCoordinate>
+      <RelativeX>7</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-15.5</X>
-            <Y>-0.5</Y>
+            <X>4.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -371,19 +423,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>112</LeftCoordinate>
-      <RightCoordinate>168</RightCoordinate>
-      <TopCoordinate>69</TopCoordinate>
-      <BottomCoordinate>138</BottomCoordinate>
+      <LeftCoordinate>249</LeftCoordinate>
+      <RightCoordinate>276</RightCoordinate>
+      <TopCoordinate>209</TopCoordinate>
+      <BottomCoordinate>277</BottomCoordinate>
+      <RelativeX>6.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-16.5</X>
-            <Y>-0.5</Y>
+            <X>4.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -399,19 +453,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>168</LeftCoordinate>
-      <RightCoordinate>224</RightCoordinate>
-      <TopCoordinate>69</TopCoordinate>
-      <BottomCoordinate>138</BottomCoordinate>
+      <LeftCoordinate>55</LeftCoordinate>
+      <RightCoordinate>80</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>278</BottomCoordinate>
+      <RelativeX>5.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-16.5</X>
-            <Y>-0.5</Y>
+            <X>3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -427,19 +483,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>224</LeftCoordinate>
-      <RightCoordinate>280</RightCoordinate>
-      <TopCoordinate>69</TopCoordinate>
-      <BottomCoordinate>138</BottomCoordinate>
+      <LeftCoordinate>132</LeftCoordinate>
+      <RightCoordinate>156</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>278</BottomCoordinate>
+      <RelativeX>5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-17.5</X>
-            <Y>-0.5</Y>
+            <X>3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -455,19 +513,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>280</LeftCoordinate>
-      <RightCoordinate>336</RightCoordinate>
-      <TopCoordinate>69</TopCoordinate>
-      <BottomCoordinate>138</BottomCoordinate>
+      <LeftCoordinate>205</LeftCoordinate>
+      <RightCoordinate>228</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>278</BottomCoordinate>
+      <RelativeX>4.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-17.5</X>
-            <Y>-0.5</Y>
+            <X>3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -483,19 +543,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>336</LeftCoordinate>
-      <RightCoordinate>392</RightCoordinate>
-      <TopCoordinate>69</TopCoordinate>
-      <BottomCoordinate>138</BottomCoordinate>
+      <LeftCoordinate>229</LeftCoordinate>
+      <RightCoordinate>251</RightCoordinate>
+      <TopCoordinate>278</TopCoordinate>
+      <BottomCoordinate>346</BottomCoordinate>
+      <RelativeX>4</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-17.5</X>
-            <Y>-0.5</Y>
+            <X>3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -511,47 +573,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>0</LeftCoordinate>
-      <RightCoordinate>56</RightCoordinate>
-      <TopCoordinate>138</TopCoordinate>
-      <BottomCoordinate>207</BottomCoordinate>
+      <LeftCoordinate>252</LeftCoordinate>
+      <RightCoordinate>274</RightCoordinate>
+      <TopCoordinate>278</TopCoordinate>
+      <BottomCoordinate>346</BottomCoordinate>
+      <RelativeX>4</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-17.5</X>
-            <Y>-0.5</Y>
+            <X>3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
-            <Alpha>1</Alpha>
-            <Red>0.9372549</Red>
-            <Green>0.9254902</Green>
-            <Blue>1</Blue>
-          </AxisAlignedRectangleSave>
-        </AxisAlignedRectangleSaves>
-        <AxisAlignedCubeSaves />
-        <PolygonSaves />
-        <CircleSaves />
-        <SphereSaves />
-      </ShapeCollectionSave>
-    </Frame>
-    <Frame>
-      <TextureName>Robot96.png</TextureName>
-      <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>56</LeftCoordinate>
-      <RightCoordinate>112</RightCoordinate>
-      <TopCoordinate>138</TopCoordinate>
-      <BottomCoordinate>207</BottomCoordinate>
-      <ShapeCollectionSave>
-        <AxisAlignedRectangleSaves>
-          <AxisAlignedRectangleSave>
-            <X>-17.5</X>
-            <Y>-0.5</Y>
-            <Z>0</Z>
-            <ScaleX>9.5</ScaleX>
-            <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -571,19 +607,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>56</LeftCoordinate>
-      <RightCoordinate>112</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>277</LeftCoordinate>
+      <RightCoordinate>299</RightCoordinate>
+      <TopCoordinate>209</TopCoordinate>
+      <BottomCoordinate>277</BottomCoordinate>
+      <RelativeX>-4</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>17.5</X>
-            <Y>-0.5</Y>
+            <X>-3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -600,19 +638,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>112</LeftCoordinate>
-      <RightCoordinate>168</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>181</LeftCoordinate>
+      <RightCoordinate>204</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>278</BottomCoordinate>
+      <RelativeX>-4.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>16.5</X>
-            <Y>-0.5</Y>
+            <X>-4.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -629,19 +669,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>168</LeftCoordinate>
-      <RightCoordinate>224</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>28</LeftCoordinate>
+      <RightCoordinate>54</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>278</BottomCoordinate>
+      <RelativeX>-6</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>16.5</X>
-            <Y>-0.5</Y>
+            <X>-4.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -658,31 +700,33 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>224</LeftCoordinate>
-      <RightCoordinate>280</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>1</LeftCoordinate>
+      <RightCoordinate>33</RightCoordinate>
+      <TopCoordinate>141</TopCoordinate>
+      <BottomCoordinate>209</BottomCoordinate>
+      <RelativeX>-9</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-1.5</X>
-            <Y>22</Y>
+            <X>-22.5</X>
+            <Y>8.5</Y>
             <Z>0</Z>
             <ScaleX>2.5</ScaleX>
             <ScaleY>2.5</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0.54509807</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>15.5</X>
-            <Y>-0.5</Y>
+            <X>-5.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -699,31 +743,33 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>280</LeftCoordinate>
-      <RightCoordinate>336</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>179</LeftCoordinate>
+      <RightCoordinate>218</RightCoordinate>
+      <TopCoordinate>71</TopCoordinate>
+      <BottomCoordinate>139</BottomCoordinate>
+      <RelativeX>-12.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-7</X>
-            <Y>23.5</Y>
+            <X>-28</X>
+            <Y>10</Y>
             <Z>0</Z>
             <ScaleX>4</ScaleX>
             <ScaleY>2</ScaleY>
-            <Name>PrimaryHurtbox</Name>
+            <Name>PrimaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>15.5</X>
-            <Y>-0.5</Y>
+            <X>-5.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -740,31 +786,33 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>280</LeftCoordinate>
-      <RightCoordinate>336</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>219</LeftCoordinate>
+      <RightCoordinate>258</RightCoordinate>
+      <TopCoordinate>71</TopCoordinate>
+      <BottomCoordinate>139</BottomCoordinate>
+      <RelativeX>-12.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-7</X>
-            <Y>23.5</Y>
+            <X>-28</X>
+            <Y>10</Y>
             <Z>0</Z>
             <ScaleX>4</ScaleX>
             <ScaleY>2</ScaleY>
-            <Name>PrimaryHurtbox</Name>
+            <Name>PrimaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>15.5</X>
-            <Y>-0.5</Y>
+            <X>-5.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -781,31 +829,64 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>336</LeftCoordinate>
-      <RightCoordinate>392</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>259</LeftCoordinate>
+      <RightCoordinate>298</RightCoordinate>
+      <TopCoordinate>71</TopCoordinate>
+      <BottomCoordinate>139</BottomCoordinate>
+      <RelativeX>-12.5</RelativeX>
+      <RelativeY>-14</RelativeY>
+      <ShapeCollectionSave>
+        <AxisAlignedRectangleSaves>
+          <AxisAlignedRectangleSave>
+            <X>-26.5</X>
+            <Y>9.5</Y>
+            <Z>0</Z>
+            <ScaleX>2.5</ScaleX>
+            <ScaleY>2.5</ScaleY>
+            <Name>SecondaryHitbox</Name>
+            <Alpha>1</Alpha>
+            <Red>1</Red>
+            <Green>0.54509807</Green>
+            <Blue>0</Blue>
+          </AxisAlignedRectangleSave>
+          <AxisAlignedRectangleSave>
+            <X>-5.5</X>
+            <Y>-14</Y>
+            <Z>0</Z>
+            <ScaleX>9.5</ScaleX>
+            <ScaleY>34</ScaleY>
+            <Name>SolidBounds</Name>
+            <Alpha>1</Alpha>
+            <Red>0.9372549</Red>
+            <Green>0.9254902</Green>
+            <Blue>1</Blue>
+          </AxisAlignedRectangleSave>
+        </AxisAlignedRectangleSaves>
+        <AxisAlignedCubeSaves />
+        <PolygonSaves />
+        <CircleSaves />
+        <SphereSaves />
+      </ShapeCollectionSave>
+    </Frame>
+    <Frame>
+      <FlipHorizontal>true</FlipHorizontal>
+      <TextureName>Robot96.png</TextureName>
+      <FrameLength>0.023</FrameLength>
+      <LeftCoordinate>249</LeftCoordinate>
+      <RightCoordinate>282</RightCoordinate>
+      <TopCoordinate>140</TopCoordinate>
+      <BottomCoordinate>208</BottomCoordinate>
+      <RelativeX>-9.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
             <X>-5.5</X>
-            <Y>23</Y>
-            <Z>0</Z>
-            <ScaleX>2.5</ScaleX>
-            <ScaleY>2.5</ScaleY>
-            <Name>SecondaryHurtbox</Name>
-            <Alpha>1</Alpha>
-            <Red>1</Red>
-            <Green>0.54509807</Green>
-            <Blue>0</Blue>
-          </AxisAlignedRectangleSave>
-          <AxisAlignedRectangleSave>
-            <X>15.5</X>
-            <Y>-0.5</Y>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -822,19 +903,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>0</LeftCoordinate>
-      <RightCoordinate>56</RightCoordinate>
-      <TopCoordinate>69</TopCoordinate>
-      <BottomCoordinate>138</BottomCoordinate>
+      <LeftCoordinate>67</LeftCoordinate>
+      <RightCoordinate>98</RightCoordinate>
+      <TopCoordinate>141</TopCoordinate>
+      <BottomCoordinate>209</BottomCoordinate>
+      <RelativeX>-8.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>15.5</X>
-            <Y>-0.5</Y>
+            <X>-5.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -851,19 +934,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>56</LeftCoordinate>
-      <RightCoordinate>112</RightCoordinate>
-      <TopCoordinate>69</TopCoordinate>
-      <BottomCoordinate>138</BottomCoordinate>
+      <LeftCoordinate>129</LeftCoordinate>
+      <RightCoordinate>157</RightCoordinate>
+      <TopCoordinate>141</TopCoordinate>
+      <BottomCoordinate>209</BottomCoordinate>
+      <RelativeX>-7</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>15.5</X>
-            <Y>-0.5</Y>
+            <X>-4.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -880,19 +965,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>112</LeftCoordinate>
-      <RightCoordinate>168</RightCoordinate>
-      <TopCoordinate>69</TopCoordinate>
-      <BottomCoordinate>138</BottomCoordinate>
+      <LeftCoordinate>249</LeftCoordinate>
+      <RightCoordinate>276</RightCoordinate>
+      <TopCoordinate>209</TopCoordinate>
+      <BottomCoordinate>277</BottomCoordinate>
+      <RelativeX>-6.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>16.5</X>
-            <Y>-0.5</Y>
+            <X>-4.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -909,19 +996,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>168</LeftCoordinate>
-      <RightCoordinate>224</RightCoordinate>
-      <TopCoordinate>69</TopCoordinate>
-      <BottomCoordinate>138</BottomCoordinate>
+      <LeftCoordinate>55</LeftCoordinate>
+      <RightCoordinate>80</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>278</BottomCoordinate>
+      <RelativeX>-5.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>16.5</X>
-            <Y>-0.5</Y>
+            <X>-3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -938,19 +1027,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>224</LeftCoordinate>
-      <RightCoordinate>280</RightCoordinate>
-      <TopCoordinate>69</TopCoordinate>
-      <BottomCoordinate>138</BottomCoordinate>
+      <LeftCoordinate>132</LeftCoordinate>
+      <RightCoordinate>156</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>278</BottomCoordinate>
+      <RelativeX>-5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>17.5</X>
-            <Y>-0.5</Y>
+            <X>-3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -967,19 +1058,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>280</LeftCoordinate>
-      <RightCoordinate>336</RightCoordinate>
-      <TopCoordinate>69</TopCoordinate>
-      <BottomCoordinate>138</BottomCoordinate>
+      <LeftCoordinate>205</LeftCoordinate>
+      <RightCoordinate>228</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>278</BottomCoordinate>
+      <RelativeX>-4.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>17.5</X>
-            <Y>-0.5</Y>
+            <X>-3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -996,19 +1089,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>336</LeftCoordinate>
-      <RightCoordinate>392</RightCoordinate>
-      <TopCoordinate>69</TopCoordinate>
-      <BottomCoordinate>138</BottomCoordinate>
+      <LeftCoordinate>229</LeftCoordinate>
+      <RightCoordinate>251</RightCoordinate>
+      <TopCoordinate>278</TopCoordinate>
+      <BottomCoordinate>346</BottomCoordinate>
+      <RelativeX>-4</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>17.5</X>
-            <Y>-0.5</Y>
+            <X>-3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1025,48 +1120,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>0</LeftCoordinate>
-      <RightCoordinate>56</RightCoordinate>
-      <TopCoordinate>138</TopCoordinate>
-      <BottomCoordinate>207</BottomCoordinate>
+      <LeftCoordinate>252</LeftCoordinate>
+      <RightCoordinate>274</RightCoordinate>
+      <TopCoordinate>278</TopCoordinate>
+      <BottomCoordinate>346</BottomCoordinate>
+      <RelativeX>-4</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>17.5</X>
-            <Y>-0.5</Y>
+            <X>-3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
-            <Alpha>1</Alpha>
-            <Red>0.9372549</Red>
-            <Green>0.9254902</Green>
-            <Blue>1</Blue>
-          </AxisAlignedRectangleSave>
-        </AxisAlignedRectangleSaves>
-        <AxisAlignedCubeSaves />
-        <PolygonSaves />
-        <CircleSaves />
-        <SphereSaves />
-      </ShapeCollectionSave>
-    </Frame>
-    <Frame>
-      <FlipHorizontal>true</FlipHorizontal>
-      <TextureName>Robot96.png</TextureName>
-      <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>56</LeftCoordinate>
-      <RightCoordinate>112</RightCoordinate>
-      <TopCoordinate>138</TopCoordinate>
-      <BottomCoordinate>207</BottomCoordinate>
-      <ShapeCollectionSave>
-        <AxisAlignedRectangleSaves>
-          <AxisAlignedRectangleSave>
-            <X>17.5</X>
-            <Y>-0.5</Y>
-            <Z>0</Z>
-            <ScaleX>9.5</ScaleX>
-            <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1085,19 +1153,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>0</LeftCoordinate>
-      <RightCoordinate>56</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>28</LeftCoordinate>
+      <RightCoordinate>50</RightCoordinate>
+      <TopCoordinate>279</TopCoordinate>
+      <BottomCoordinate>347</BottomCoordinate>
+      <RelativeX>4</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-17.5</X>
-            <Y>-0.5</Y>
+            <X>3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1113,19 +1183,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>112</LeftCoordinate>
-      <RightCoordinate>168</RightCoordinate>
-      <TopCoordinate>138</TopCoordinate>
-      <BottomCoordinate>207</BottomCoordinate>
+      <LeftCoordinate>74</LeftCoordinate>
+      <RightCoordinate>95</RightCoordinate>
+      <TopCoordinate>279</TopCoordinate>
+      <BottomCoordinate>347</BottomCoordinate>
+      <RelativeX>4.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-17.5</X>
-            <Y>-0.5</Y>
+            <X>3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1141,19 +1213,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>168</LeftCoordinate>
-      <RightCoordinate>224</RightCoordinate>
-      <TopCoordinate>138</TopCoordinate>
-      <BottomCoordinate>207</BottomCoordinate>
+      <LeftCoordinate>158</LeftCoordinate>
+      <RightCoordinate>179</RightCoordinate>
+      <TopCoordinate>141</TopCoordinate>
+      <BottomCoordinate>209</BottomCoordinate>
+      <RelativeX>4.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-16.5</X>
-            <Y>-0.5</Y>
+            <X>4.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1169,19 +1243,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>224</LeftCoordinate>
-      <RightCoordinate>280</RightCoordinate>
-      <TopCoordinate>138</TopCoordinate>
-      <BottomCoordinate>207</BottomCoordinate>
+      <LeftCoordinate>275</LeftCoordinate>
+      <RightCoordinate>297</RightCoordinate>
+      <TopCoordinate>278</TopCoordinate>
+      <BottomCoordinate>346</BottomCoordinate>
+      <RelativeX>5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-16.5</X>
-            <Y>-0.5</Y>
+            <X>4.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1197,19 +1273,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>280</LeftCoordinate>
-      <RightCoordinate>336</RightCoordinate>
-      <TopCoordinate>138</TopCoordinate>
-      <BottomCoordinate>207</BottomCoordinate>
+      <LeftCoordinate>157</LeftCoordinate>
+      <RightCoordinate>180</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>278</BottomCoordinate>
+      <RelativeX>6.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-15.5</X>
-            <Y>-0.5</Y>
+            <X>5.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1225,19 +1303,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>336</LeftCoordinate>
-      <RightCoordinate>392</RightCoordinate>
-      <TopCoordinate>138</TopCoordinate>
-      <BottomCoordinate>207</BottomCoordinate>
+      <LeftCoordinate>107</LeftCoordinate>
+      <RightCoordinate>131</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>278</BottomCoordinate>
+      <RelativeX>8</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-14.5</X>
-            <Y>-0.5</Y>
+            <X>6.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1253,19 +1333,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>0</LeftCoordinate>
-      <RightCoordinate>56</RightCoordinate>
-      <TopCoordinate>207</TopCoordinate>
-      <BottomCoordinate>276</BottomCoordinate>
+      <LeftCoordinate>1</LeftCoordinate>
+      <RightCoordinate>27</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>279</BottomCoordinate>
+      <RelativeX>10</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-13.5</X>
-            <Y>0</Y>
+            <X>7.5</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8.5</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1281,19 +1363,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>56</LeftCoordinate>
-      <RightCoordinate>112</RightCoordinate>
-      <TopCoordinate>207</TopCoordinate>
-      <BottomCoordinate>276</BottomCoordinate>
+      <LeftCoordinate>215</LeftCoordinate>
+      <RightCoordinate>248</RightCoordinate>
+      <TopCoordinate>140</TopCoordinate>
+      <BottomCoordinate>209</BottomCoordinate>
+      <RelativeX>13.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-12.5</X>
-            <Y>0</Y>
+            <X>8.5</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8.5</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1309,79 +1393,81 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>112</LeftCoordinate>
-      <RightCoordinate>168</RightCoordinate>
-      <TopCoordinate>207</TopCoordinate>
-      <BottomCoordinate>276</BottomCoordinate>
+      <LeftCoordinate>95</LeftCoordinate>
+      <RightCoordinate>137</RightCoordinate>
+      <TopCoordinate>71</TopCoordinate>
+      <BottomCoordinate>140</BottomCoordinate>
+      <RelativeX>19</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>16.5</X>
-            <Y>25</Y>
+            <X>37.5</X>
+            <Y>11.5</Y>
             <Z>0</Z>
             <ScaleX>2.5</ScaleX>
             <ScaleY>2.5</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>0.2</Red>
             <Green>0.105882354</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>13.5</X>
-            <Y>22.5</Y>
+            <X>34.5</X>
+            <Y>9</Y>
             <Z>0</Z>
             <ScaleX>2.5</ScaleX>
             <ScaleY>2</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>0.4</Red>
             <Green>0.21568628</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>10</X>
-            <Y>20.5</Y>
+            <X>31</X>
+            <Y>7</Y>
             <Z>0</Z>
             <ScaleX>3</ScaleX>
             <ScaleY>2</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>0.6</Red>
             <Green>0.3254902</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>6</X>
-            <Y>18.5</Y>
+            <X>27</X>
+            <Y>5</Y>
             <Z>0</Z>
             <ScaleX>3</ScaleX>
             <ScaleY>2</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>0.8</Red>
             <Green>0.43529412</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>3</X>
-            <Y>16</Y>
+            <X>24</X>
+            <Y>2.5</Y>
             <Z>0</Z>
             <ScaleX>3</ScaleX>
             <ScaleY>1.5</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0.54509807</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>-11</X>
-            <Y>0</Y>
+            <X>10</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1397,67 +1483,69 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>168</LeftCoordinate>
-      <RightCoordinate>224</RightCoordinate>
-      <TopCoordinate>207</TopCoordinate>
-      <BottomCoordinate>276</BottomCoordinate>
+      <LeftCoordinate>1</LeftCoordinate>
+      <RightCoordinate>51</RightCoordinate>
+      <TopCoordinate>1</TopCoordinate>
+      <BottomCoordinate>70</BottomCoordinate>
+      <RelativeX>23</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>26</X>
-            <Y>25</Y>
+            <X>46.5</X>
+            <Y>11.5</Y>
             <Z>0</Z>
-            <ScaleX>2</ScaleX>
+            <ScaleX>1.5</ScaleX>
             <ScaleY>1.5</ScaleY>
-            <Name>PrimaryHurtbox</Name>
+            <Name>PrimaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>22.5</X>
-            <Y>24.5</Y>
+            <X>43.5</X>
+            <Y>11</Y>
             <Z>0</Z>
             <ScaleX>2.5</ScaleX>
             <ScaleY>1</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0.7254902</Green>
             <Blue>0.4</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>17.5</X>
-            <Y>23.5</Y>
+            <X>38.5</X>
+            <Y>10</Y>
             <Z>0</Z>
             <ScaleX>5.5</ScaleX>
             <ScaleY>1</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0.63529414</Green>
             <Blue>0.2</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>13</X>
-            <Y>22</Y>
+            <X>34</X>
+            <Y>8.5</Y>
             <Z>0</Z>
             <ScaleX>4</ScaleX>
             <ScaleY>1.5</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0.54509807</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>-10</X>
-            <Y>0</Y>
+            <X>11</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1473,55 +1561,57 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>224</LeftCoordinate>
-      <RightCoordinate>280</RightCoordinate>
-      <TopCoordinate>207</TopCoordinate>
-      <BottomCoordinate>276</BottomCoordinate>
+      <LeftCoordinate>52</LeftCoordinate>
+      <RightCoordinate>101</RightCoordinate>
+      <TopCoordinate>1</TopCoordinate>
+      <BottomCoordinate>70</BottomCoordinate>
+      <RelativeX>23.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>25</X>
-            <Y>24.5</Y>
+            <X>46</X>
+            <Y>11</Y>
             <Z>0</Z>
             <ScaleX>2</ScaleX>
             <ScaleY>2</ScaleY>
-            <Name>PrimaryHurtbox</Name>
+            <Name>PrimaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>10.5</X>
-            <Y>24.5</Y>
+            <X>31.5</X>
+            <Y>11</Y>
             <Z>0</Z>
             <ScaleX>4.5</ScaleX>
             <ScaleY>2</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0.7254902</Green>
             <Blue>0.4</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>19</X>
-            <Y>24.5</Y>
+            <X>40</X>
+            <Y>11</Y>
             <Z>0</Z>
             <ScaleX>4</ScaleX>
             <ScaleY>2</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0.63529414</Green>
             <Blue>0.2</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>-10</X>
-            <Y>0</Y>
+            <X>11</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1537,31 +1627,33 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>280</LeftCoordinate>
-      <RightCoordinate>336</RightCoordinate>
-      <TopCoordinate>207</TopCoordinate>
-      <BottomCoordinate>276</BottomCoordinate>
+      <LeftCoordinate>102</LeftCoordinate>
+      <RightCoordinate>151</RightCoordinate>
+      <TopCoordinate>1</TopCoordinate>
+      <BottomCoordinate>70</BottomCoordinate>
+      <RelativeX>23.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>17</X>
-            <Y>25</Y>
+            <X>38</X>
+            <Y>11.5</Y>
             <Z>0</Z>
             <ScaleX>10</ScaleX>
             <ScaleY>1.5</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0.63529414</Green>
             <Blue>0.2</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>-10</X>
-            <Y>0</Y>
+            <X>11</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1577,19 +1669,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>336</LeftCoordinate>
-      <RightCoordinate>392</RightCoordinate>
-      <TopCoordinate>207</TopCoordinate>
-      <BottomCoordinate>276</BottomCoordinate>
+      <LeftCoordinate>152</LeftCoordinate>
+      <RightCoordinate>201</RightCoordinate>
+      <TopCoordinate>1</TopCoordinate>
+      <BottomCoordinate>70</BottomCoordinate>
+      <RelativeX>23.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-10</X>
-            <Y>0</Y>
+            <X>11</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1605,19 +1699,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>0</LeftCoordinate>
-      <RightCoordinate>56</RightCoordinate>
-      <TopCoordinate>276</TopCoordinate>
-      <BottomCoordinate>345</BottomCoordinate>
+      <LeftCoordinate>202</LeftCoordinate>
+      <RightCoordinate>251</RightCoordinate>
+      <TopCoordinate>1</TopCoordinate>
+      <BottomCoordinate>70</BottomCoordinate>
+      <RelativeX>23.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-10</X>
-            <Y>0</Y>
+            <X>11</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1633,19 +1729,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>56</LeftCoordinate>
-      <RightCoordinate>112</RightCoordinate>
-      <TopCoordinate>276</TopCoordinate>
-      <BottomCoordinate>345</BottomCoordinate>
+      <LeftCoordinate>1</LeftCoordinate>
+      <RightCoordinate>50</RightCoordinate>
+      <TopCoordinate>71</TopCoordinate>
+      <BottomCoordinate>140</BottomCoordinate>
+      <RelativeX>23.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-11</X>
-            <Y>0</Y>
+            <X>10</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1661,19 +1759,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>112</LeftCoordinate>
-      <RightCoordinate>168</RightCoordinate>
-      <TopCoordinate>276</TopCoordinate>
-      <BottomCoordinate>345</BottomCoordinate>
+      <LeftCoordinate>252</LeftCoordinate>
+      <RightCoordinate>299</RightCoordinate>
+      <TopCoordinate>1</TopCoordinate>
+      <BottomCoordinate>70</BottomCoordinate>
+      <RelativeX>21.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-12</X>
-            <Y>0</Y>
+            <X>9</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1689,19 +1789,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>168</LeftCoordinate>
-      <RightCoordinate>224</RightCoordinate>
-      <TopCoordinate>276</TopCoordinate>
-      <BottomCoordinate>345</BottomCoordinate>
+      <LeftCoordinate>51</LeftCoordinate>
+      <RightCoordinate>94</RightCoordinate>
+      <TopCoordinate>71</TopCoordinate>
+      <BottomCoordinate>140</BottomCoordinate>
+      <RelativeX>18.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-13</X>
-            <Y>0</Y>
+            <X>8</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1717,19 +1819,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>224</LeftCoordinate>
-      <RightCoordinate>280</RightCoordinate>
-      <TopCoordinate>276</TopCoordinate>
-      <BottomCoordinate>345</BottomCoordinate>
+      <LeftCoordinate>138</LeftCoordinate>
+      <RightCoordinate>178</RightCoordinate>
+      <TopCoordinate>71</TopCoordinate>
+      <BottomCoordinate>140</BottomCoordinate>
+      <RelativeX>16</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-14</X>
-            <Y>0</Y>
+            <X>7</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1745,19 +1849,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>280</LeftCoordinate>
-      <RightCoordinate>336</RightCoordinate>
-      <TopCoordinate>276</TopCoordinate>
-      <BottomCoordinate>345</BottomCoordinate>
+      <LeftCoordinate>179</LeftCoordinate>
+      <RightCoordinate>214</RightCoordinate>
+      <TopCoordinate>140</TopCoordinate>
+      <BottomCoordinate>209</BottomCoordinate>
+      <RelativeX>13.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-15</X>
-            <Y>0</Y>
+            <X>6</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1773,19 +1879,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>336</LeftCoordinate>
-      <RightCoordinate>392</RightCoordinate>
-      <TopCoordinate>276</TopCoordinate>
-      <BottomCoordinate>345</BottomCoordinate>
+      <LeftCoordinate>34</LeftCoordinate>
+      <RightCoordinate>66</RightCoordinate>
+      <TopCoordinate>141</TopCoordinate>
+      <BottomCoordinate>209</BottomCoordinate>
+      <RelativeX>11</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-16</X>
-            <Y>0</Y>
+            <X>5</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1801,19 +1909,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>0</LeftCoordinate>
-      <RightCoordinate>56</RightCoordinate>
-      <TopCoordinate>345</TopCoordinate>
-      <BottomCoordinate>414</BottomCoordinate>
+      <LeftCoordinate>99</LeftCoordinate>
+      <RightCoordinate>128</RightCoordinate>
+      <TopCoordinate>141</TopCoordinate>
+      <BottomCoordinate>209</BottomCoordinate>
+      <RelativeX>8.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-16</X>
-            <Y>0</Y>
+            <X>5</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1829,19 +1939,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>56</LeftCoordinate>
-      <RightCoordinate>112</RightCoordinate>
-      <TopCoordinate>345</TopCoordinate>
-      <BottomCoordinate>414</BottomCoordinate>
+      <LeftCoordinate>81</LeftCoordinate>
+      <RightCoordinate>106</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>278</BottomCoordinate>
+      <RelativeX>6.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-17</X>
-            <Y>0</Y>
+            <X>4</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1857,19 +1969,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>112</LeftCoordinate>
-      <RightCoordinate>168</RightCoordinate>
-      <TopCoordinate>345</TopCoordinate>
-      <BottomCoordinate>414</BottomCoordinate>
+      <LeftCoordinate>51</LeftCoordinate>
+      <RightCoordinate>73</RightCoordinate>
+      <TopCoordinate>279</TopCoordinate>
+      <BottomCoordinate>347</BottomCoordinate>
+      <RelativeX>5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-16.5</X>
-            <Y>-0.5</Y>
+            <X>4.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1885,19 +1999,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>168</LeftCoordinate>
-      <RightCoordinate>224</RightCoordinate>
-      <TopCoordinate>345</TopCoordinate>
-      <BottomCoordinate>414</BottomCoordinate>
+      <LeftCoordinate>96</LeftCoordinate>
+      <RightCoordinate>117</RightCoordinate>
+      <TopCoordinate>279</TopCoordinate>
+      <BottomCoordinate>347</BottomCoordinate>
+      <RelativeX>4.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-17.5</X>
-            <Y>-0.5</Y>
+            <X>3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1913,19 +2029,21 @@
     <Frame>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>0</LeftCoordinate>
-      <RightCoordinate>56</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>28</LeftCoordinate>
+      <RightCoordinate>50</RightCoordinate>
+      <TopCoordinate>279</TopCoordinate>
+      <BottomCoordinate>347</BottomCoordinate>
+      <RelativeX>4</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-17.5</X>
-            <Y>-0.5</Y>
+            <X>3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1945,19 +2063,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>0</LeftCoordinate>
-      <RightCoordinate>56</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>28</LeftCoordinate>
+      <RightCoordinate>50</RightCoordinate>
+      <TopCoordinate>279</TopCoordinate>
+      <BottomCoordinate>347</BottomCoordinate>
+      <RelativeX>-4</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>17.5</X>
-            <Y>-0.5</Y>
+            <X>-3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -1974,19 +2094,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>112</LeftCoordinate>
-      <RightCoordinate>168</RightCoordinate>
-      <TopCoordinate>138</TopCoordinate>
-      <BottomCoordinate>207</BottomCoordinate>
+      <LeftCoordinate>74</LeftCoordinate>
+      <RightCoordinate>95</RightCoordinate>
+      <TopCoordinate>279</TopCoordinate>
+      <BottomCoordinate>347</BottomCoordinate>
+      <RelativeX>-4.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>17.5</X>
-            <Y>-0.5</Y>
+            <X>-3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2003,19 +2125,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>168</LeftCoordinate>
-      <RightCoordinate>224</RightCoordinate>
-      <TopCoordinate>138</TopCoordinate>
-      <BottomCoordinate>207</BottomCoordinate>
+      <LeftCoordinate>158</LeftCoordinate>
+      <RightCoordinate>179</RightCoordinate>
+      <TopCoordinate>141</TopCoordinate>
+      <BottomCoordinate>209</BottomCoordinate>
+      <RelativeX>-4.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>16.5</X>
-            <Y>-0.5</Y>
+            <X>-4.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2032,19 +2156,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>224</LeftCoordinate>
-      <RightCoordinate>280</RightCoordinate>
-      <TopCoordinate>138</TopCoordinate>
-      <BottomCoordinate>207</BottomCoordinate>
+      <LeftCoordinate>275</LeftCoordinate>
+      <RightCoordinate>297</RightCoordinate>
+      <TopCoordinate>278</TopCoordinate>
+      <BottomCoordinate>346</BottomCoordinate>
+      <RelativeX>-5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>16.5</X>
-            <Y>-0.5</Y>
+            <X>-4.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2061,19 +2187,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>280</LeftCoordinate>
-      <RightCoordinate>336</RightCoordinate>
-      <TopCoordinate>138</TopCoordinate>
-      <BottomCoordinate>207</BottomCoordinate>
+      <LeftCoordinate>157</LeftCoordinate>
+      <RightCoordinate>180</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>278</BottomCoordinate>
+      <RelativeX>-6.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>15.5</X>
-            <Y>-0.5</Y>
+            <X>-5.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2090,19 +2218,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>336</LeftCoordinate>
-      <RightCoordinate>392</RightCoordinate>
-      <TopCoordinate>138</TopCoordinate>
-      <BottomCoordinate>207</BottomCoordinate>
+      <LeftCoordinate>107</LeftCoordinate>
+      <RightCoordinate>131</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>278</BottomCoordinate>
+      <RelativeX>-8</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>14.5</X>
-            <Y>-0.5</Y>
+            <X>-6.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2119,19 +2249,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>0</LeftCoordinate>
-      <RightCoordinate>56</RightCoordinate>
-      <TopCoordinate>207</TopCoordinate>
-      <BottomCoordinate>276</BottomCoordinate>
+      <LeftCoordinate>1</LeftCoordinate>
+      <RightCoordinate>27</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>279</BottomCoordinate>
+      <RelativeX>-10</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>13.5</X>
-            <Y>0</Y>
+            <X>-7.5</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8.5</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2148,19 +2280,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>56</LeftCoordinate>
-      <RightCoordinate>112</RightCoordinate>
-      <TopCoordinate>207</TopCoordinate>
-      <BottomCoordinate>276</BottomCoordinate>
+      <LeftCoordinate>215</LeftCoordinate>
+      <RightCoordinate>248</RightCoordinate>
+      <TopCoordinate>140</TopCoordinate>
+      <BottomCoordinate>209</BottomCoordinate>
+      <RelativeX>-13.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>12.5</X>
-            <Y>0</Y>
+            <X>-8.5</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8.5</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2177,79 +2311,81 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>112</LeftCoordinate>
-      <RightCoordinate>168</RightCoordinate>
-      <TopCoordinate>207</TopCoordinate>
-      <BottomCoordinate>276</BottomCoordinate>
+      <LeftCoordinate>95</LeftCoordinate>
+      <RightCoordinate>137</RightCoordinate>
+      <TopCoordinate>71</TopCoordinate>
+      <BottomCoordinate>140</BottomCoordinate>
+      <RelativeX>-19</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-16.5</X>
-            <Y>25</Y>
+            <X>-37.5</X>
+            <Y>11.5</Y>
             <Z>0</Z>
             <ScaleX>2.5</ScaleX>
             <ScaleY>2.5</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>0.2</Red>
             <Green>0.105882354</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>-13.5</X>
-            <Y>22.5</Y>
+            <X>-34.5</X>
+            <Y>9</Y>
             <Z>0</Z>
             <ScaleX>2.5</ScaleX>
             <ScaleY>2</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>0.4</Red>
             <Green>0.21568628</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>-10</X>
-            <Y>20.5</Y>
+            <X>-31</X>
+            <Y>7</Y>
             <Z>0</Z>
             <ScaleX>3</ScaleX>
             <ScaleY>2</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>0.6</Red>
             <Green>0.3254902</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>-6</X>
-            <Y>18.5</Y>
+            <X>-27</X>
+            <Y>5</Y>
             <Z>0</Z>
             <ScaleX>3</ScaleX>
             <ScaleY>2</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>0.8</Red>
             <Green>0.43529412</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>-3</X>
-            <Y>16</Y>
+            <X>-24</X>
+            <Y>2.5</Y>
             <Z>0</Z>
             <ScaleX>3</ScaleX>
             <ScaleY>1.5</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0.54509807</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>11</X>
-            <Y>0</Y>
+            <X>-10</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2266,67 +2402,69 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>168</LeftCoordinate>
-      <RightCoordinate>224</RightCoordinate>
-      <TopCoordinate>207</TopCoordinate>
-      <BottomCoordinate>276</BottomCoordinate>
+      <LeftCoordinate>1</LeftCoordinate>
+      <RightCoordinate>51</RightCoordinate>
+      <TopCoordinate>1</TopCoordinate>
+      <BottomCoordinate>70</BottomCoordinate>
+      <RelativeX>-23</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-26</X>
-            <Y>25</Y>
+            <X>-46.5</X>
+            <Y>11.5</Y>
             <Z>0</Z>
-            <ScaleX>2</ScaleX>
+            <ScaleX>1.5</ScaleX>
             <ScaleY>1.5</ScaleY>
-            <Name>PrimaryHurtbox</Name>
+            <Name>PrimaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>-22.5</X>
-            <Y>24.5</Y>
+            <X>-43.5</X>
+            <Y>11</Y>
             <Z>0</Z>
             <ScaleX>2.5</ScaleX>
             <ScaleY>1</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0.7254902</Green>
             <Blue>0.4</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>-17.5</X>
-            <Y>23.5</Y>
+            <X>-38.5</X>
+            <Y>10</Y>
             <Z>0</Z>
             <ScaleX>5.5</ScaleX>
             <ScaleY>1</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0.63529414</Green>
             <Blue>0.2</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>-13</X>
-            <Y>22</Y>
+            <X>-34</X>
+            <Y>8.5</Y>
             <Z>0</Z>
             <ScaleX>4</ScaleX>
             <ScaleY>1.5</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0.54509807</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>10</X>
-            <Y>0</Y>
+            <X>-11</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2343,55 +2481,57 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>224</LeftCoordinate>
-      <RightCoordinate>280</RightCoordinate>
-      <TopCoordinate>207</TopCoordinate>
-      <BottomCoordinate>276</BottomCoordinate>
+      <LeftCoordinate>52</LeftCoordinate>
+      <RightCoordinate>101</RightCoordinate>
+      <TopCoordinate>1</TopCoordinate>
+      <BottomCoordinate>70</BottomCoordinate>
+      <RelativeX>-23.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-25</X>
-            <Y>24.5</Y>
+            <X>-46</X>
+            <Y>11</Y>
             <Z>0</Z>
             <ScaleX>2</ScaleX>
             <ScaleY>2</ScaleY>
-            <Name>PrimaryHurtbox</Name>
+            <Name>PrimaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0</Green>
             <Blue>0</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>-10.5</X>
-            <Y>24.5</Y>
+            <X>-31.5</X>
+            <Y>11</Y>
             <Z>0</Z>
             <ScaleX>4.5</ScaleX>
             <ScaleY>2</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0.7254902</Green>
             <Blue>0.4</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>-19</X>
-            <Y>24.5</Y>
+            <X>-40</X>
+            <Y>11</Y>
             <Z>0</Z>
             <ScaleX>4</ScaleX>
             <ScaleY>2</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0.63529414</Green>
             <Blue>0.2</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>10</X>
-            <Y>0</Y>
+            <X>-11</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2408,31 +2548,33 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>280</LeftCoordinate>
-      <RightCoordinate>336</RightCoordinate>
-      <TopCoordinate>207</TopCoordinate>
-      <BottomCoordinate>276</BottomCoordinate>
+      <LeftCoordinate>102</LeftCoordinate>
+      <RightCoordinate>151</RightCoordinate>
+      <TopCoordinate>1</TopCoordinate>
+      <BottomCoordinate>70</BottomCoordinate>
+      <RelativeX>-23.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>-17</X>
-            <Y>25</Y>
+            <X>-38</X>
+            <Y>11.5</Y>
             <Z>0</Z>
             <ScaleX>10</ScaleX>
             <ScaleY>1.5</ScaleY>
-            <Name>SecondaryHurtbox</Name>
+            <Name>SecondaryHitbox</Name>
             <Alpha>1</Alpha>
             <Red>1</Red>
             <Green>0.63529414</Green>
             <Blue>0.2</Blue>
           </AxisAlignedRectangleSave>
           <AxisAlignedRectangleSave>
-            <X>10</X>
-            <Y>0</Y>
+            <X>-11</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2449,19 +2591,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>336</LeftCoordinate>
-      <RightCoordinate>392</RightCoordinate>
-      <TopCoordinate>207</TopCoordinate>
-      <BottomCoordinate>276</BottomCoordinate>
+      <LeftCoordinate>152</LeftCoordinate>
+      <RightCoordinate>201</RightCoordinate>
+      <TopCoordinate>1</TopCoordinate>
+      <BottomCoordinate>70</BottomCoordinate>
+      <RelativeX>-23.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>10</X>
-            <Y>0</Y>
+            <X>-11</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2478,19 +2622,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>0</LeftCoordinate>
-      <RightCoordinate>56</RightCoordinate>
-      <TopCoordinate>276</TopCoordinate>
-      <BottomCoordinate>345</BottomCoordinate>
+      <LeftCoordinate>202</LeftCoordinate>
+      <RightCoordinate>251</RightCoordinate>
+      <TopCoordinate>1</TopCoordinate>
+      <BottomCoordinate>70</BottomCoordinate>
+      <RelativeX>-23.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>10</X>
-            <Y>0</Y>
+            <X>-11</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2507,19 +2653,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>56</LeftCoordinate>
-      <RightCoordinate>112</RightCoordinate>
-      <TopCoordinate>276</TopCoordinate>
-      <BottomCoordinate>345</BottomCoordinate>
+      <LeftCoordinate>1</LeftCoordinate>
+      <RightCoordinate>50</RightCoordinate>
+      <TopCoordinate>71</TopCoordinate>
+      <BottomCoordinate>140</BottomCoordinate>
+      <RelativeX>-23.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>11</X>
-            <Y>0</Y>
+            <X>-10</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2536,19 +2684,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>112</LeftCoordinate>
-      <RightCoordinate>168</RightCoordinate>
-      <TopCoordinate>276</TopCoordinate>
-      <BottomCoordinate>345</BottomCoordinate>
+      <LeftCoordinate>252</LeftCoordinate>
+      <RightCoordinate>299</RightCoordinate>
+      <TopCoordinate>1</TopCoordinate>
+      <BottomCoordinate>70</BottomCoordinate>
+      <RelativeX>-21.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>12</X>
-            <Y>0</Y>
+            <X>-9</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2565,19 +2715,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>168</LeftCoordinate>
-      <RightCoordinate>224</RightCoordinate>
-      <TopCoordinate>276</TopCoordinate>
-      <BottomCoordinate>345</BottomCoordinate>
+      <LeftCoordinate>51</LeftCoordinate>
+      <RightCoordinate>94</RightCoordinate>
+      <TopCoordinate>71</TopCoordinate>
+      <BottomCoordinate>140</BottomCoordinate>
+      <RelativeX>-18.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>13</X>
-            <Y>0</Y>
+            <X>-8</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2594,19 +2746,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>224</LeftCoordinate>
-      <RightCoordinate>280</RightCoordinate>
-      <TopCoordinate>276</TopCoordinate>
-      <BottomCoordinate>345</BottomCoordinate>
+      <LeftCoordinate>138</LeftCoordinate>
+      <RightCoordinate>178</RightCoordinate>
+      <TopCoordinate>71</TopCoordinate>
+      <BottomCoordinate>140</BottomCoordinate>
+      <RelativeX>-16</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>14</X>
-            <Y>0</Y>
+            <X>-7</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2623,19 +2777,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>280</LeftCoordinate>
-      <RightCoordinate>336</RightCoordinate>
-      <TopCoordinate>276</TopCoordinate>
-      <BottomCoordinate>345</BottomCoordinate>
+      <LeftCoordinate>179</LeftCoordinate>
+      <RightCoordinate>214</RightCoordinate>
+      <TopCoordinate>140</TopCoordinate>
+      <BottomCoordinate>209</BottomCoordinate>
+      <RelativeX>-13.5</RelativeX>
+      <RelativeY>-13.5</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>15</X>
-            <Y>0</Y>
+            <X>-6</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2652,19 +2808,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>336</LeftCoordinate>
-      <RightCoordinate>392</RightCoordinate>
-      <TopCoordinate>276</TopCoordinate>
-      <BottomCoordinate>345</BottomCoordinate>
+      <LeftCoordinate>34</LeftCoordinate>
+      <RightCoordinate>66</RightCoordinate>
+      <TopCoordinate>141</TopCoordinate>
+      <BottomCoordinate>209</BottomCoordinate>
+      <RelativeX>-11</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>16</X>
-            <Y>0</Y>
+            <X>-5</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2681,19 +2839,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>0</LeftCoordinate>
-      <RightCoordinate>56</RightCoordinate>
-      <TopCoordinate>345</TopCoordinate>
-      <BottomCoordinate>414</BottomCoordinate>
+      <LeftCoordinate>99</LeftCoordinate>
+      <RightCoordinate>128</RightCoordinate>
+      <TopCoordinate>141</TopCoordinate>
+      <BottomCoordinate>209</BottomCoordinate>
+      <RelativeX>-8.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>16</X>
-            <Y>0</Y>
+            <X>-5</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2710,19 +2870,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>56</LeftCoordinate>
-      <RightCoordinate>112</RightCoordinate>
-      <TopCoordinate>345</TopCoordinate>
-      <BottomCoordinate>414</BottomCoordinate>
+      <LeftCoordinate>81</LeftCoordinate>
+      <RightCoordinate>106</RightCoordinate>
+      <TopCoordinate>210</TopCoordinate>
+      <BottomCoordinate>278</BottomCoordinate>
+      <RelativeX>-6.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>17</X>
-            <Y>0</Y>
+            <X>-4</X>
+            <Y>-13.5</Y>
             <Z>0</Z>
             <ScaleX>8</ScaleX>
             <ScaleY>34.5</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2739,19 +2901,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>112</LeftCoordinate>
-      <RightCoordinate>168</RightCoordinate>
-      <TopCoordinate>345</TopCoordinate>
-      <BottomCoordinate>414</BottomCoordinate>
+      <LeftCoordinate>51</LeftCoordinate>
+      <RightCoordinate>73</RightCoordinate>
+      <TopCoordinate>279</TopCoordinate>
+      <BottomCoordinate>347</BottomCoordinate>
+      <RelativeX>-5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>16.5</X>
-            <Y>-0.5</Y>
+            <X>-4.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2768,19 +2932,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>168</LeftCoordinate>
-      <RightCoordinate>224</RightCoordinate>
-      <TopCoordinate>345</TopCoordinate>
-      <BottomCoordinate>414</BottomCoordinate>
+      <LeftCoordinate>96</LeftCoordinate>
+      <RightCoordinate>117</RightCoordinate>
+      <TopCoordinate>279</TopCoordinate>
+      <BottomCoordinate>347</BottomCoordinate>
+      <RelativeX>-4.5</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>17.5</X>
-            <Y>-0.5</Y>
+            <X>-3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>
@@ -2797,19 +2963,21 @@
       <FlipHorizontal>true</FlipHorizontal>
       <TextureName>Robot96.png</TextureName>
       <FrameLength>0.023</FrameLength>
-      <LeftCoordinate>0</LeftCoordinate>
-      <RightCoordinate>56</RightCoordinate>
-      <TopCoordinate>0</TopCoordinate>
-      <BottomCoordinate>69</BottomCoordinate>
+      <LeftCoordinate>28</LeftCoordinate>
+      <RightCoordinate>50</RightCoordinate>
+      <TopCoordinate>279</TopCoordinate>
+      <BottomCoordinate>347</BottomCoordinate>
+      <RelativeX>-4</RelativeX>
+      <RelativeY>-14</RelativeY>
       <ShapeCollectionSave>
         <AxisAlignedRectangleSaves>
           <AxisAlignedRectangleSave>
-            <X>17.5</X>
-            <Y>-0.5</Y>
+            <X>-3.5</X>
+            <Y>-14</Y>
             <Z>0</Z>
             <ScaleX>9.5</ScaleX>
             <ScaleY>34</ScaleY>
-            <Name>SolidCollision</Name>
+            <Name>SolidBounds</Name>
             <Alpha>1</Alpha>
             <Red>0.9372549</Red>
             <Green>0.9254902</Green>

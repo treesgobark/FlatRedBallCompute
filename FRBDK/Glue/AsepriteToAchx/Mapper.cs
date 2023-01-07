@@ -105,6 +105,10 @@ public static class Mapper
 
     private static AnimationFrameSave Map(AseSheetFrame aseFrame, string textureName, bool flipHorizontal, bool flipVertical)
     {
+        int trimmedFromLeft = aseFrame.SpriteSourceSize.X;
+        int trimmedFromRight = aseFrame.SourceSize.W - (aseFrame.SpriteSourceSize.X + aseFrame.SpriteSourceSize.W);
+        int trimmedFromTop = aseFrame.SpriteSourceSize.Y;
+        int trimmedFromBottom = aseFrame.SourceSize.H - (aseFrame.SpriteSourceSize.Y + aseFrame.SpriteSourceSize.H);
         AnimationFrameSave frbFrame = new()
         {
             FlipHorizontal = flipHorizontal,
@@ -115,6 +119,8 @@ public static class Mapper
             RightCoordinate = aseFrame.Frame.X + aseFrame.Frame.W,
             TopCoordinate = aseFrame.Frame.Y,
             BottomCoordinate = aseFrame.Frame.Y + aseFrame.Frame.H,
+            RelativeX = (trimmedFromLeft - trimmedFromRight) / 2f,
+            RelativeY = (trimmedFromBottom - trimmedFromTop) / 2f,
         };
         
         return frbFrame;
@@ -193,6 +199,8 @@ public static class Mapper
         {
             frame.FlipHorizontal = mirrorX ? !frame.FlipHorizontal : frame.FlipHorizontal;
             frame.FlipVertical = mirrorY ? !frame.FlipVertical : frame.FlipVertical;
+            frame.RelativeX *= mirrorX ? -1 : 1;
+            frame.RelativeY *= mirrorY ? -1 : 1;
             
             if (frame.ShapeCollectionSave is null)
             {

@@ -36,6 +36,6 @@ var sheetData = JsonSerializer.Deserialize<AsepriteSheetData>(jsonString, option
 var newChainList = Mapper.MapWithCollision(sheetData, asepriteFile);
 
 FileManager.XmlSerialize(newChainList, out string serializedChainList);
-File.WriteAllText(Path.Combine(outputDirectory, AsepriteFileName + ".Generated.achx"), serializedChainList);
+File.WriteAllText(Path.Combine(outputDirectory, AsepriteFileName + "Generated.achx"), serializedChainList);
 
 Console.WriteLine();

@@ -59,8 +59,8 @@ public abstract class CollisionShapeCollection<T>
         AxisAlignedRectangleSave achRect = new()
         {
             Name = name,
-            X = center.x - sheetFrame.SpriteSourceSize.W / 2f,
-            Y = -center.y + sheetFrame.SpriteSourceSize.H / 2f,
+            X = center.x - sheetFrame.SpriteSourceSize.W / 2f + achFrame.RelativeX,
+            Y = -center.y + sheetFrame.SpriteSourceSize.H / 2f + achFrame.RelativeY,
             Z = 0,
             ScaleX = rectangle.Width / 2f,
             ScaleY = rectangle.Height / 2f,
