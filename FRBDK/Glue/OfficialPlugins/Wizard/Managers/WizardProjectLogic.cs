@@ -561,7 +561,7 @@ namespace OfficialPluginsCore.Wizard.Managers
 
         #endregion
 
-
+        #region Player
 
         private static async Task<EntitySave> HandleAddPlayerEntity(WizardViewModel vm)
         {
@@ -719,9 +719,16 @@ namespace OfficialPluginsCore.Wizard.Managers
                 // none are checked, but we'll still have it be ICollidable
             }
 
+            if(vm.IsPlayerDamageableChecked)
+            {
+                addEntityVm.IsIDamageableChecked= true;
+            }
+
             addEntityVm.IsICollidableChecked = true;
 
             addEntityVm.IsSpriteChecked = vm.AddPlayerSprite;
+
+            addEntityVm.IncludeListsInScreens = vm.AddPlayerListToGameScreen;
 
             playerEntity = await GlueCommands.Self.GluxCommands.EntityCommands.AddEntityAsync(addEntityVm);
 
@@ -770,16 +777,18 @@ namespace OfficialPluginsCore.Wizard.Managers
             NamedObjectSave playerList = null;
             if (vm.AddGameScreen && vm.AddPlayerListToGameScreen)
             {
-                {
-                    AddObjectViewModel addObjectViewModel = new AddObjectViewModel();
-                    addObjectViewModel.ForcedElementToAddTo = gameScreen;
-                    addObjectViewModel.SourceType = SourceType.FlatRedBallType;
-                    addObjectViewModel.SelectedAti = AvailableAssetTypes.CommonAtis.PositionedObjectList;
-                    addObjectViewModel.SourceClassGenericType = playerEntity.Name;
-                    addObjectViewModel.ObjectName = $"{playerEntity.GetStrippedName()}List";
+                playerList = gameScreen.NamedObjects.FirstOrDefault(item => item.IsList && item.SourceClassGenericType == playerEntity.Name);
+                // This is handled above by the variable being assigned on the entity creation.
+                //{
+                //    AddObjectViewModel addObjectViewModel = new AddObjectViewModel();
+                //    addObjectViewModel.ForcedElementToAddTo = gameScreen;
+                //    addObjectViewModel.SourceType = SourceType.FlatRedBallType;
+                //    addObjectViewModel.SelectedAti = AvailableAssetTypes.CommonAtis.PositionedObjectList;
+                //    addObjectViewModel.SourceClassGenericType = playerEntity.Name;
+                //    addObjectViewModel.ObjectName = $"{playerEntity.GetStrippedName()}List";
 
-                    playerList = await GlueCommands.Self.GluxCommands.AddNewNamedObjectToAsync(addObjectViewModel, gameScreen, null);
-                }
+                //    playerList = await GlueCommands.Self.GluxCommands.AddNewNamedObjectToAsync(addObjectViewModel, gameScreen, null);
+                //}
 
                 if (vm.AddPlayerToList)
                 {
@@ -863,6 +872,10 @@ namespace OfficialPluginsCore.Wizard.Managers
         }
 
 
+        #endregion
+
+        #region Additional Screens
+
         private static async Task AddAdditionalScreens(WizardViewModel vm)
         {
             foreach (var screenName in vm.AdditionalNonGameScreens)
@@ -870,6 +883,8 @@ namespace OfficialPluginsCore.Wizard.Managers
                 await TaskManager.Self.AddAsync(async () => await GlueCommands.Self.GluxCommands.ScreenCommands.AddScreen(screenName), $"Adding screen {screenName}");
             }
         }
+
+        #endregion
 
         private static async Task ApplyCameraValues(WizardViewModel vm, ScreenSave gameScreen)
         {

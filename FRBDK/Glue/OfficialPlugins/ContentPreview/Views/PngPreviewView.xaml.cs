@@ -35,25 +35,7 @@ namespace OfficialPlugins.ContentPreview.Views
             {
                 if (value != textureFilePath)
                 {
-                    if (value == null || value.Exists() == false)
-                    {
-                        MainSprite.Texture = null;
-                    }
-                    else
-                    {
-                        try
-                        {
-                            using (var stream = System.IO.File.OpenRead(value.FullPath))
-                            {
-                                // cache?
-                                MainSprite.Texture = SKBitmap.Decode(stream);
-                            }
-                        }
-                        catch
-                        {
-                            // do we do anything?
-                        }
-                    }
+                    ForceRefreshMainSpriteTexture(value);
                 }
             }
         }
@@ -70,6 +52,34 @@ namespace OfficialPlugins.ContentPreview.Views
             InitializeComponent();
 
             this.Loaded += HandleLoaded;
+        }
+
+        public void ForceRefreshMainSpriteTexture(FilePath value)
+        {
+            if (value == null || value.Exists() == false)
+            {
+                MainSprite.Texture = null;
+                GumCanvas.InvalidateVisual();
+            }
+            else
+            {
+                try
+                {
+                    using (var stream = System.IO.File.OpenRead(value.FullPath))
+                    {
+                        // cache?
+                        MainSprite.Texture = SKBitmap.Decode(stream);
+                        GumCanvas.InvalidateVisual();
+
+                    }
+                }
+                catch
+                {
+                    // do we do anything?
+                }
+            }
+
+            textureFilePath = value;
         }
 
         private void HandleLoaded(object sender, RoutedEventArgs e)

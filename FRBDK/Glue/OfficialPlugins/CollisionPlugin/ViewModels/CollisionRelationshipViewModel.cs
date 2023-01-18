@@ -1,4 +1,5 @@
-﻿using FlatRedBall.Glue.Events;
+﻿using FlatRedBall.Glue.CodeGeneration.CodeBuilder;
+using FlatRedBall.Glue.Events;
 using FlatRedBall.Glue.MVVM;
 using FlatRedBall.Glue.Plugins.ExportedImplementations;
 using FlatRedBall.Glue.SaveClasses;
@@ -33,9 +34,13 @@ namespace OfficialPlugins.CollisionPlugin.ViewModels
     public class CollisionRelationshipViewModel :
         PropertyListContainerViewModel
     {
+        #region Consts
+
         public const string EntireObject = "<Entire Object>";
         public const string AlwaysColliding = "<Always Colliding>";
         public const string SelfCollisionSuffix = "(self collision)";
+
+        #endregion
 
         #region Object and Subcollision Object
 
@@ -499,6 +504,19 @@ namespace OfficialPlugins.CollisionPlugin.ViewModels
         }
 
         [DependsOn(nameof(CollisionLimit))]
+        public bool IsClosestCollisionLimitChecked
+        {
+            get => CollisionLimit == CollisionLimit.Closest;
+            set
+            {
+                if(value)
+                {
+                    CollisionLimit = CollisionLimit.Closest;
+                }
+            }
+        }
+
+        [DependsOn(nameof(CollisionLimit))]
         [DependsOn(nameof(FirstIndividualStrippedType))]
         [DependsOn(nameof(SecondIndividualStrippedType))]
         public string CollisionLimitExplanationText
@@ -508,10 +526,11 @@ namespace OfficialPlugins.CollisionPlugin.ViewModels
                 switch (CollisionLimit)
                 {
                     case CollisionLimit.All:
-                        return $"Each {SecondIndividualStrippedType} will attempt to collide against each {FirstIndividualStrippedType} each frame";
+                        return $"Each {FirstIndividualStrippedType} will attempt to collide against each {SecondIndividualStrippedType} each frame";
                     case CollisionLimit.First:
-                        return $"Each {SecondIndividualStrippedType} will only collide at most with one {FirstIndividualStrippedType} each frame";
-
+                        return $"Each {FirstIndividualStrippedType} will only collide at most with one {SecondIndividualStrippedType} each frame";
+                    case CollisionLimit.Closest:
+                        return $"Each {FirstIndividualStrippedType} will collide with the closest {SecondIndividualStrippedType} each frame";
                 }
                 return "";
             }

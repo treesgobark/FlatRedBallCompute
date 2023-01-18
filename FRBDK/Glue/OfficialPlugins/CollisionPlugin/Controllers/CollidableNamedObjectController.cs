@@ -181,6 +181,10 @@ namespace OfficialPlugins.CollisionPlugin.Controllers
 
         public static async Task<NamedObjectSave> CreateCollisionRelationshipBetweenObjects(string firstNosName, string secondNosName, GlueElement container)
         {
+            if(container == null)
+            {
+                throw new ArgumentNullException(nameof(container));
+            }
             NamedObjectSave newNos = null;
             await TaskManager.Self.AddAsync(async () =>
             {
@@ -205,6 +209,7 @@ namespace OfficialPlugins.CollisionPlugin.Controllers
 
                 string effectiveSecondCollisionName;
                 NamedObjectSave effectiveFirstNos;
+                NamedObjectSave effectiveSecondNos;
 
                 bool needToInvert = firstNos.SourceType != SourceType.Entity &&
                     firstNos.IsList == false;
@@ -218,6 +223,7 @@ namespace OfficialPlugins.CollisionPlugin.Controllers
 
                     effectiveFirstNos = secondNos;
                     effectiveSecondCollisionName = firstNosName;
+                    effectiveSecondNos = firstNos;
                 }
                 else
                 {
@@ -228,21 +234,38 @@ namespace OfficialPlugins.CollisionPlugin.Controllers
 
                     effectiveFirstNos = firstNos;
                     effectiveSecondCollisionName = secondNosName;
+                    effectiveSecondNos = secondNos;
                 }
+
+                EntitySave firstEntityType = null;
+                if (effectiveFirstNos.SourceType == SourceType.Entity)
+                {
+                    firstEntityType = ObjectFinder.Self.GetEntitySave(effectiveFirstNos.SourceClassType);
+                }
+                else if (effectiveFirstNos.IsList)
+                {
+                    firstEntityType = ObjectFinder.Self.GetEntitySave(effectiveFirstNos.SourceClassGenericType);
+                }
+
+                EntitySave secondEntityType = null;
+                if(effectiveSecondNos != null)
+                {
+                    // This can happen if the user is creating an always-colliding relationship.
+                    if(effectiveSecondNos.SourceType == SourceType.Entity)
+                    {
+                        secondEntityType = ObjectFinder.Self.GetEntitySave(effectiveSecondNos.SourceClassType);
+                    }
+                    else
+                    {
+                        secondEntityType = ObjectFinder.Self.GetEntitySave(effectiveSecondNos.SourceClassGenericType);
+                    }
+                }
+
 
                 // this used to rely on the name "SolidCollision" but that's not a set standard and there could be multiple
                 // TileShapeCollections
                 if (secondNos?.GetAssetTypeInfo()?.FriendlyName == "TileShapeCollection")
                 {
-                    EntitySave firstEntityType = null;
-                    if (effectiveFirstNos.SourceType == SourceType.Entity)
-                    {
-                        firstEntityType = ObjectFinder.Self.GetEntitySave(effectiveFirstNos.SourceClassType);
-                    }
-                    else if (effectiveFirstNos.IsList)
-                    {
-                        firstEntityType = ObjectFinder.Self.GetEntitySave(effectiveFirstNos.SourceClassGenericType);
-                    }
 
                     bool isPlatformer = false;
                     if (firstEntityType != null)
@@ -271,6 +294,8 @@ namespace OfficialPlugins.CollisionPlugin.Controllers
                     }
                 }
 
+
+
                 var sourceClassType = AssetTypeInfoManager.GetCollisionRelationshipSourceClassType(container, addObjectModel.Properties);
                 addObjectModel.SourceClassType = sourceClassType;
 
@@ -281,9 +306,43 @@ namespace OfficialPlugins.CollisionPlugin.Controllers
                     await GlueCommands.Self.GluxCommands.AddNewNamedObjectToAsync(addObjectModel,
                     container, listToAddTo: null);
 
+                // if this is an always-colliding relationship, the user will typically want this
+                // to be at the beginning before all other relationships. Therefore, let's remove
+                // and re-add it:
+                var isAlwaysColliding = secondNos == null;
+                if(isAlwaysColliding)
+                {
+                    container.NamedObjects.Remove(newNos);
+                    container.NamedObjects.Insert(0, newNos);
+                }
+
                 // this will regenerate and save everything too:
                 CollisionRelationshipViewModelController.TryApplyAutoName(
                     container, newNos);
+
+                var isFirstIDamageable = firstEntityType?.GetPropertyValue("ImplementsIDamageable") 
+                    as bool? ?? false;
+                var isFirstIDamageArea = firstEntityType?.GetPropertyValue("ImplementsIDamageArea")
+                    as bool? ?? false;
+
+                var isSecondIDamageable = secondEntityType?.GetPropertyValue("ImplementsIDamageable")
+                    as bool? ?? false;
+                var isSecondIDamageArea = secondEntityType?.GetPropertyValue("ImplementsIDamageArea")
+                    as bool? ?? false;
+
+                // January 10, 2023
+                // Why not always check
+                // this value? If the objects
+                // are not IDamageable/IDamageArea, 
+                // then the code generator will ignore
+                // these options. If they are, then we want
+                // them always enabled. 
+                async Task SetProp(string propertyName) =>
+                    await GlueCommands.Self.GluxCommands.SetPropertyOnAsync(newNos, propertyName, true, false, true);
+
+                await SetProp(nameof(CollisionRelationshipViewModel.IsDealDamageChecked));
+                await SetProp(nameof(CollisionRelationshipViewModel.IsDestroyFirstOnDamageChecked));
+                await SetProp(nameof(CollisionRelationshipViewModel.IsDestroySecondOnDamageChecked));
 
 
                 RefreshViewModelTo(container, firstNos, ViewModel);

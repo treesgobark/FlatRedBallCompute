@@ -18,6 +18,8 @@ namespace OfficialPlugins.ContentPreview.Managers
         static PluginBase Plugin;
         static PluginTab Tab;
 
+        public static FilePath PngFilePath => View.TextureFilePath;
+
         public static PngViewModel ViewModel { get; private set; }
 
         public static void Initialize(PluginBase plugin)
@@ -73,5 +75,8 @@ namespace OfficialPlugins.ContentPreview.Managers
             Tab.Show();
             view.GumCanvas.InvalidateVisual();
         }
+
+        internal static void ForceRefreshTexture(FilePath filePath) =>
+            View.ForceRefreshMainSpriteTexture(filePath);
     }
 }

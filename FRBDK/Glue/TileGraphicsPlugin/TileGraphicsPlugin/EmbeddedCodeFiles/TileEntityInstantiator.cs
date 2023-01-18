@@ -353,7 +353,7 @@ namespace FlatRedBall.TileEntities
                                                 RightTextureCoordinate = tx + (tileSize / layer.Texture.Width),
                                                 BottomTextureCoordinate = ty + (tileSize / layer.Texture.Height)
                                             };
-                                            asEntity.SetTileTextureCoordinates(ttm);
+                                            asEntity.SetTileMetadata(ttm);
                                         }
 #endif
                                     }
@@ -489,7 +489,7 @@ namespace FlatRedBall.TileEntities
                             $"Check the property type in your TMX and make sure it matches the type on the entity.";
                         throw new Exception(message, e);
                     }
-                    catch (Exception e)
+                    catch (Exception)
                     {
                         // Since this code indiscriminately tries to set properties, it may set properties which don't
                         // actually exist. Therefore, we tolerate failures.
