@@ -100,8 +100,8 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
 
                         var elementsToRegenerate = new HashSet<GlueElement>();
 
-                        // regenerate *this*:
-                        elementsToRegenerate.Add(elementToRename);
+                        // The Types object is in the root object, so we need to generate the root-most object
+                        elementsToRegenerate.Add(ObjectFinder.Self.GetRootBaseElement(elementToRename));
 
                         if (elementToRename is EntitySave entityToRename)
                         {
@@ -435,15 +435,21 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
             var newElement = gluxCommands.EntityCommands.AddEntity(
                 directory + viewModel.Name, is2D: true);
 
-            GlueState.Self.CurrentElement = newElement;
+            // Why select it here? This causes the tree view to not yet show the inherited variables.
+            // Maybe this was done because the property ReactToPropertyChanged required it to be selected?
+            //GlueState.Self.CurrentElement = newElement;
 
             var hasInheritance = false;
             if(viewModel.HasInheritance)
             {
                 newElement.BaseEntity = viewModel.SelectedBaseEntity;
 
-                EditorObjects.IoC.Container.Get<SetPropertyManager>().ReactToPropertyChanged(
-                    nameof(newElement.BaseEntity), false, nameof(newElement.BaseEntity), null);
+                //EditorObjects.IoC.Container.Get<SetPropertyManager>().ReactToPropertyChanged(
+                //    nameof(newElement.BaseEntity), false, nameof(newElement.BaseEntity), null);
+
+                Container.Get<EntitySaveSetPropertyLogic>().ReactToEntityChangedProperty(nameof(newElement.BaseEntity), 
+                    null, newElement);
+
 
                 hasInheritance = true;
             }
@@ -462,7 +468,7 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
             //    because we'd have to suppress all the other calls.
             bool needsRefreshAndSave = false;
 
-            if(!hasInheritance)
+            if (!hasInheritance)
             {
                 if (viewModel.IsSpriteChecked)
                 {
@@ -470,8 +476,7 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
                     addObjectViewModel.ObjectName = "SpriteInstance";
                     addObjectViewModel.SelectedAti = AvailableAssetTypes.CommonAtis.Sprite;
                     addObjectViewModel.SourceType = SourceType.FlatRedBallType;
-                    await gluxCommands.AddNewNamedObjectToSelectedElementAsync(addObjectViewModel);
-                    GlueState.Self.CurrentElement = newElement;
+                    await gluxCommands.AddNewNamedObjectToAsync(addObjectViewModel, newElement);
                 }
 
                 if (viewModel.IsTextChecked)
@@ -480,8 +485,7 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
                     addObjectViewModel.ObjectName = "TextInstance";
                     addObjectViewModel.SelectedAti = AvailableAssetTypes.CommonAtis.Text;
                     addObjectViewModel.SourceType = SourceType.FlatRedBallType;
-                    await gluxCommands.AddNewNamedObjectToSelectedElementAsync(addObjectViewModel);
-                    GlueState.Self.CurrentElement = newElement;
+                    await gluxCommands.AddNewNamedObjectToAsync(addObjectViewModel, newElement);
                 }
 
                 if (viewModel.IsCircleChecked)
@@ -490,8 +494,7 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
                     addObjectViewModel.ObjectName = "CircleInstance";
                     addObjectViewModel.SelectedAti = AvailableAssetTypes.CommonAtis.Circle;
                     addObjectViewModel.SourceType = SourceType.FlatRedBallType;
-                    await gluxCommands.AddNewNamedObjectToSelectedElementAsync(addObjectViewModel);
-                    GlueState.Self.CurrentElement = newElement;
+                    await gluxCommands.AddNewNamedObjectToAsync(addObjectViewModel, newElement);
                 }
 
                 if (viewModel.IsAxisAlignedRectangleChecked)
@@ -500,8 +503,7 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
                     addObjectViewModel.ObjectName = "AxisAlignedRectangleInstance";
                     addObjectViewModel.SelectedAti = AvailableAssetTypes.CommonAtis.AxisAlignedRectangle;
                     addObjectViewModel.SourceType = SourceType.FlatRedBallType;
-                    await gluxCommands.AddNewNamedObjectToSelectedElementAsync(addObjectViewModel);
-                    GlueState.Self.CurrentElement = newElement;
+                    await gluxCommands.AddNewNamedObjectToAsync(addObjectViewModel, newElement);
                 }
                 if (viewModel.IsPolygonChecked)
                 {
@@ -510,7 +512,7 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
                     addObjectViewModel.SelectedAti = AvailableAssetTypes.CommonAtis.Polygon;
                     addObjectViewModel.SourceType = SourceType.FlatRedBallType;
 
-                    var nos = await gluxCommands.AddNewNamedObjectToSelectedElementAsync(addObjectViewModel);
+                    var nos = await gluxCommands.AddNewNamedObjectToAsync(addObjectViewModel, newElement);
                     CustomVariableInNamedObject instructions = null;
                     instructions = nos.GetCustomVariable("Points");
                     if (instructions == null)
@@ -527,10 +529,7 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
                     points.Add(new Vector2(-16, 16));
                     instructions.Value = points;
 
-
                     needsRefreshAndSave = true;
-
-                    GlueState.Self.CurrentElement = newElement;
                 }
 
                 if (viewModel.IsIVisibleChecked)
@@ -638,13 +637,19 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
             }
 
             PluginManager.ReactToNewEntityCreated(newElement);
+
+            GlueState.Self.CurrentElement = newElement;
+
+
             if (needsRefreshAndSave)
             {
                 GlueCommands.Self.DoOnUiThread(() =>
                 {
                     MainGlueWindow.Self.PropertyGrid.Refresh();
                 });
-                var throwaway = GlueCommands.Self.GenerateCodeCommands.GenerateElementCodeAsync(newElement);
+                //var throwaway = GlueCommands.Self.GenerateCodeCommands.GenerateElementCodeAsync(newElement);
+                // Bases need to be generated because they may now contain the Type 
+                var throwaway = GlueCommands.Self.GenerateCodeCommands.GenerateElementCodeAsync(ObjectFinder.Self.GetRootBaseElement( newElement ));
                 GluxCommands.Self.SaveGlux();
             }
 
