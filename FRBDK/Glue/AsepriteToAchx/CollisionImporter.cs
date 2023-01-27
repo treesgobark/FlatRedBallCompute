@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 namespace AsepriteToAchx;
 
 
-public static class CollisionImporter
+public static partial class CollisionImporter
 {
     // public CollisionImporter((string name, ColorComponent component) category1,
     //     (string name, ColorComponent component) category2 = default,
@@ -110,8 +110,12 @@ public static class CollisionImporter
         achFrame.ShapeCollectionSave = new ShapeCollectionSave();
 
         FrameCollisionData data = new();
+        
         data.Rectangles.FillRelevantPoints(rectangleCels);
         achFrame.ShapeCollectionSave.AxisAlignedRectangleSaves = data.Rectangles.GetShapeList(achFrame, sheetFrame);
+        
+        data.Circles.FillRelevantPoints(circleCels);
+        achFrame.ShapeCollectionSave.CircleSaves = data.Circles.GetShapeList(achFrame, sheetFrame);
     }
     
     public static bool IsAlphaNumeric(string strToCheck)
