@@ -35,7 +35,7 @@ namespace OfficialPlugins.MonoGameContent
 
             if(project.DotNetVersionNumber >= 6)
             {
-                return Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\.dotnet\tools\mgcb.exe";
+                return Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\.dotnet\tools\mgcb-compute.exe";
             }
             else
             {
