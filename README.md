@@ -1,3 +1,6 @@
+FRB fork utilizing https://github.com/cpt-max/MonoGame
+No guarantee any of this works. User discretion is advised.
+
 ![FlatRedBall](Content/logo-512.png)
 
 
