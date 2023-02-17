@@ -13,6 +13,8 @@ using FlatRedBall.Glue.CodeGeneration.Game1;
 using FlatRedBall.Glue.IO;
 using FlatRedBall.Glue.Elements;
 using System.Threading.Tasks;
+using Xceed.Wpf.Toolkit;
+using FlatRedBall.Glue.VSHelpers;
 
 namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
 {
@@ -53,17 +55,45 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
             {
                 throw new ArgumentNullException(nameof(element));
             }
-            string taskName = nameof(GenerateElementCode) + " " + element.ToString();
 
-            var throwaway = TaskManager.Self.AddAsync(async () => await CodeGeneratorIElement.GenerateElementAndDerivedCode(element),
-                taskName,
+            // Don't wait for it, just put it on the task and go on
+            // If this has a LOT of derived elements (like a GameScreen and tons of levels),
+            // it could be heavy to do each one, so let's dice them up so the UI can be responsive
+            // and other operations can inject themselves at higher priority:
+
+            //TaskManager.Self.Add(async () => await CodeGeneratorIElement.GenerateElementAndDerivedCode(element),
+            //    taskName,
+            //    TaskExecutionPreference.AddOrMoveToEnd);
+
+            TaskManager.Self.Add(
+                () => CodeGeneratorIElement.GenerateSpecificElement(element),
+                nameof(GenerateElementCode) + " " + element.ToString(), 
                 TaskExecutionPreference.AddOrMoveToEnd);
+
+            List<GlueElement> derivedElements = ObjectFinder.Self.GetAllElementsThatInheritFrom(element);
+
+            foreach (var derivedElement in derivedElements)
+            {
+                TaskManager.Self.Add(
+                    () => CodeGeneratorIElement.GenerateSpecificElement(derivedElement),
+                    nameof(GenerateElementCode) + " " + derivedElement.ToString(),
+                    TaskExecutionPreference.AddOrMoveToEnd);
+            }
         }
 
         public Task GenerateElementCodeAsync(GlueElement element)
         {
             string taskName = nameof(GenerateElementCode) + " " + element.ToString();
 
+            // February 5, 2023
+            // Calling AddAsync only
+            // creates a new task if not
+            // already in a task. However,
+            // we always want a task for this
+            // because most of the time we never
+            // want to await it, so we want the task
+            // added to the end so we can move on.
+            //return TaskManager.Self.AddAsync(async () => await CodeGeneratorIElement.GenerateElementAndDerivedCode(element),
             return TaskManager.Self.AddAsync(async () => await CodeGeneratorIElement.GenerateElementAndDerivedCode(element),
                 taskName,
                 TaskExecutionPreference.AddOrMoveToEnd);
@@ -274,6 +304,15 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
                 },
                 5);
             }
+        }
+
+        public string ReplaceGlueVersionString(string contents)
+        {
+            if (contents.Contains("$GLUE_VERSIONS$"))
+            {
+                return contents.Replace("$GLUE_VERSIONS$", CodeBuildItemAdder.GetGlueVersionsString());
+            }
+            return contents;
         }
 
     }

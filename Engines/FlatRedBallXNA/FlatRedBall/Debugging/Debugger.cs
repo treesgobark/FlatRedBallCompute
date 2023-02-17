@@ -192,10 +192,10 @@ namespace FlatRedBall.Debugging
                 ? @"hh\:mm\:ss"
                 : @"mm\:ss";
 
-#if MONOGAME
+#if MONOGAME && !UWP && !__IOS__
             var currentTime = song.Position.ToString(format);
 #else
-            var currentTime = song == AudioManager.CurrentSong ? MediaPlayer.PlayPosition.ToString(format) : new TimeSpan(0).ToString(format);
+            var currentTime = song == AudioManager.CurrentSong ?  Microsoft.Xna.Framework.Media.MediaPlayer.PlayPosition.ToString(format) : new TimeSpan(0).ToString(format);
 #endif
             var totalDuration = song.Duration.ToString(format);
             Write($"{song.Name} {currentTime} / {totalDuration}");
@@ -209,7 +209,7 @@ namespace FlatRedBall.Debugging
             long currentUsage;
 
                 currentUsage = GC.GetTotalMemory(false);
-                memoryInformation = "Total Memory: " + currentUsage;
+                memoryInformation = "Total Memory: " + currentUsage.ToString("N0");
 
 #if DEBUG
             if (mLastMemoryUse >= 0)
@@ -222,7 +222,7 @@ namespace FlatRedBall.Debugging
                 }
             }
             memoryInformation += "\nAverage Growth per second: " +
-                mAllocationAverage.Average.ToString("0,000");
+                mAllocationAverage.Average.ToString("N0");
 #endif
 
             LastCalculationTime = TimeManager.CurrentTime;

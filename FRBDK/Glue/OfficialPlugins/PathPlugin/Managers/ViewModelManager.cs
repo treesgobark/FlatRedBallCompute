@@ -27,9 +27,9 @@ namespace OfficialPlugins.PathPlugin.Managers
             {
                 var variableName = MainViewModel?.VariableName ?? AssetTypeInfoManager.PathsVariableName;
 
-                var variable = nos.GetCustomVariable(variableName);
+                var variable = nos?.GetCustomVariable(variableName);
 
-                if(variable == null)
+                if(variable == null && nos != null)
                 {
                     variable = new CustomVariableInNamedObject();
                     variable.Member = variableName;
@@ -42,7 +42,7 @@ namespace OfficialPlugins.PathPlugin.Managers
             }
         }
 
-        static string PathSegmentString => Variable.Value as string;
+        static string PathSegmentString => Variable?.Value as string;
 
         #endregion
 

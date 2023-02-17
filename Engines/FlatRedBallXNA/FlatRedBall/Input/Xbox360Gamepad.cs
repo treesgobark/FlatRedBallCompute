@@ -460,14 +460,7 @@ namespace FlatRedBall.Input
         {
             get
             {
-                if (mLastGamePadState == null)
-                {
-                    return false;
-                }
-                else
-                {
-                    return !mLastGamePadState.IsConnected && mGamePadState.IsConnected;
-                }
+                return !mLastGamePadState.IsConnected && mGamePadState.IsConnected;
             }
         }
 
@@ -479,15 +472,7 @@ namespace FlatRedBall.Input
         {
             get
             {
-                if (mLastGamePadState == null)
-                {
-                    return false;
-                }
-                else
-                {
-                    return mLastGamePadState.IsConnected && !mGamePadState.IsConnected;
-                }
-
+                return mLastGamePadState.IsConnected && !mGamePadState.IsConnected;
             }
         }
 
@@ -1158,7 +1143,7 @@ namespace FlatRedBall.Input
             // If this method is called multiple times per frame this line
             // of code guarantees that the user will get true every time until
             // the next TimeManager.Update (next frame).
-            bool repeatedThisFrame = mLastButtonPush[(int)button] == TimeManager.CurrentTime;
+            bool repeatedThisFrame = mLastRepeatRate[(int)button] == TimeManager.CurrentTime;
 
             if (repeatedThisFrame ||
                 (
@@ -1420,7 +1405,7 @@ namespace FlatRedBall.Input
 
             if(!found)
             {
-                if(name.Contains("Xbox"))
+                if(name?.Contains("Xbox") == true)
                 {
                     GamepadLayout = GamepadLayout.Xbox360;
                 }
@@ -1655,9 +1640,14 @@ namespace FlatRedBall.Input
 
         public override string ToString()
         {
-            var toReturn= $"{mPlayerIndex} Connected:{IsConnected} LeftStick:{mLeftStick}";
 
-            for(int i = 0; i < NumberOfButtons; i++)
+#if MONOGAME_381
+            var toReturn = $"{mPlayerIndex} {Capabilities.Identifier} Connected:{IsConnected} LeftStick:{mLeftStick}";
+#else
+            var toReturn = $"{mPlayerIndex} Connected:{IsConnected} LeftStick:{mLeftStick}";
+#endif
+
+            for (int i = 0; i < NumberOfButtons; i++)
             {
                 var button = (Button)i;
                 if(ButtonDown(button))
@@ -1670,9 +1660,9 @@ namespace FlatRedBall.Input
         }
 
 
-        #endregion
+#endregion
 
-        #region Internal Methods
+#region Internal Methods
 
         internal void Update()
         {
@@ -1683,7 +1673,10 @@ namespace FlatRedBall.Input
             //gamepadState = Microsoft.Xna.Framework.Input.GamePad.GetState(mPlayerIndex, GamePadDeadZone.None);
             gamepadState = Microsoft.Xna.Framework.Input.GamePad.GetState((int)mPlayerIndex, GamePadDeadZone.None);
 
-            mCapabilities = Microsoft.Xna.Framework.Input.GamePad.GetCapabilities((int)mPlayerIndex);
+            if(mCapabilities.DisplayName == null || WasConnectedThisFrame)
+            {
+                mCapabilities = Microsoft.Xna.Framework.Input.GamePad.GetCapabilities((int)mPlayerIndex);
+            }
 #else
             gamepadState = Microsoft.Xna.Framework.Input.GamePad.GetState(mPlayerIndex, GamePadDeadZone.None);
 
@@ -1696,11 +1689,11 @@ namespace FlatRedBall.Input
         }
 
 
-        #endregion
+#endregion
 
-        #endregion
+#endregion
 
-        #region IInputDevice Explicit Implementation
+#region IInputDevice Explicit Implementation
 
         I2DInput IInputDevice.Default2DInput
         {
@@ -1710,8 +1703,8 @@ namespace FlatRedBall.Input
             }
         }
 
-        IPressableInput defaultUpPressable;
-        IPressableInput IInputDevice.DefaultUpPressable
+        IRepeatPressableInput defaultUpPressable;
+        IRepeatPressableInput IInputDevice.DefaultUpPressable
         { 
             get 
             { 
@@ -1723,8 +1716,8 @@ namespace FlatRedBall.Input
             } 
         }
 
-        IPressableInput defaultDownPressable;
-        IPressableInput IInputDevice.DefaultDownPressable
+        IRepeatPressableInput defaultDownPressable;
+        IRepeatPressableInput IInputDevice.DefaultDownPressable
         { 
             get 
             {
@@ -1736,8 +1729,8 @@ namespace FlatRedBall.Input
             } 
         }
 
-        IPressableInput defaultLeftPressable;
-        IPressableInput IInputDevice.DefaultLeftPressable
+        IRepeatPressableInput defaultLeftPressable;
+        IRepeatPressableInput IInputDevice.DefaultLeftPressable
         { 
             get 
             { 
@@ -1749,8 +1742,8 @@ namespace FlatRedBall.Input
             } 
         }
 
-        IPressableInput defaultRightPressable;
-        IPressableInput IInputDevice.DefaultRightPressable
+        IRepeatPressableInput defaultRightPressable;
+        IRepeatPressableInput IInputDevice.DefaultRightPressable
         { 
             get 
             { 

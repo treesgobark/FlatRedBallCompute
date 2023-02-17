@@ -1,5 +1,6 @@
 ﻿using FlatRedBall.Glue.Plugins.ExportedImplementations;
 using FlatRedBall.Glue.SaveClasses;
+using FlatRedBall.IO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,12 +32,22 @@ namespace FlatRedBall.Glue.Managers
             {
                 copiedObjectClone = entity.Clone();
             }
+            else if(GlueState.Self.CurrentTreeNode.IsFolderForGlobalContentFiles())
+            {
+                copiedObjectClone = GlueState.Self.CurrentTreeNode.GetRelativeFilePath();
+            }
         }
         internal async Task HandlePaste()
         {
             if(copiedObjectClone is ReferencedFileSave asRfs)
             {
-                await GlueCommands.Self.GluxCommands.DuplicateAsync(asRfs, GlueState.Self.CurrentElement);
+                var currentTreeNode = GlueState.Self.CurrentTreeNode;
+                FilePath desiredFolder = null;
+                if(currentTreeNode.IsFolderInFilesContainerNode() || currentTreeNode.IsFolderForGlobalContentFiles())
+                {
+                    desiredFolder = GlueState.Self.ContentDirectoryPath + currentTreeNode.GetRelativeFilePath();
+                }
+                await GlueCommands.Self.GluxCommands.DuplicateAsync(asRfs, GlueState.Self.CurrentElement, desiredFolder);
             }
             else if(copiedObjectClone is NamedObjectSave asNos)
             {
@@ -49,6 +60,20 @@ namespace FlatRedBall.Glue.Managers
             else if(copiedObjectClone is GlueElement element)
             {
                 await GlueCommands.Self.GluxCommands.CopyGlueElement(element);
+            }
+            else if(copiedObjectClone is string sourceFolderRelative)
+            {
+                var sourceFolderAbsolute = GlueState.Self.ContentDirectoryPath + sourceFolderRelative;
+                var currentTreeNode = GlueState.Self.CurrentTreeNode;
+                FilePath destinationFolder = null;
+                if (currentTreeNode.IsFolderInFilesContainerNode() || currentTreeNode.IsFolderForGlobalContentFiles())
+                {
+                    destinationFolder = GlueState.Self.ContentDirectoryPath + currentTreeNode.GetRelativeFilePath();
+                }
+                if(destinationFolder != null)
+                {
+                    await GlueCommands.Self.FileCommands.PasteFolder(sourceFolderAbsolute, destinationFolder);
+                }
             }
         }
     }

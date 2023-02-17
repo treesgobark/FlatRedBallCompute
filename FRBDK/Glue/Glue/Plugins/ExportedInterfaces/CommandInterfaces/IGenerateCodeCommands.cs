@@ -15,10 +15,10 @@ namespace FlatRedBall.Glue.Plugins.ExportedInterfaces.CommandInterfaces
         void GenerateCurrentElementCode();
 
         /// <summary>
-        /// Generates the argument element's code. Also generates all elements which inherit from this element.
+        /// Generates the argument element's code. Also generates all elements which inherit from this element. This creates a Task in the TaskManger but does not
+        /// await it to finish - its' fire-and-forget.
         /// </summary>
         /// <param name="element"></param>
-        [Obsolete("Use GenerateElementCodeAsync")]
         void GenerateElementCode(GlueElement element);
 
         /// <summary>
@@ -43,5 +43,12 @@ namespace FlatRedBall.Glue.Plugins.ExportedInterfaces.CommandInterfaces
         void GenerateStartupScreenCode();
 
         void GenerateGame1();
+
+        /// <summary>
+        /// Replaces $GLUE_VERSIONS$ with all defines based on the current glux/gluj version
+        /// </summary>
+        /// <param name="contents"></param>
+        /// <returns></returns>
+        string ReplaceGlueVersionString(string contents);
     }
 }
