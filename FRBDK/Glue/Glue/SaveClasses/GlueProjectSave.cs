@@ -99,7 +99,8 @@ namespace FlatRedBall.Glue.SaveClasses
             DamageableHasHealth = 33,
             HasGame1GenerateEarly = 34,
             ICollidableHasObjectsCollidedAgainst = 35,
-            HasIRepeatPressableInput = 36
+            HasIRepeatPressableInput = 36,
+            AllTiledFilesGenerated = 37
         }
 
         #endregion
@@ -108,7 +109,7 @@ namespace FlatRedBall.Glue.SaveClasses
 
         #region Versions
 
-        public const int LatestVersion = (int)GluxVersions.HasIRepeatPressableInput;
+        public const int LatestVersion = (int)GluxVersions.AllTiledFilesGenerated;
 
         public int FileVersion { get; set; }
 

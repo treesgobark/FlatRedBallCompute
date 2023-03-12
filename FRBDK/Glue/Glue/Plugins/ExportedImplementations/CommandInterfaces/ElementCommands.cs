@@ -34,7 +34,7 @@ using System.Windows.Data;
 
 namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
 {
-    class ElementCommands : IScreenCommands, IEntityCommands,IElementCommands
+    public class ElementCommands : IScreenCommands, IEntityCommands,IElementCommands
     {
         #region Fields/Properties
 
@@ -640,18 +640,30 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
 
             GlueState.Self.CurrentElement = newElement;
 
+            if(hasInheritance || needsRefreshAndSave)
+            {
+                GlueCommands.Self.RefreshCommands.RefreshTreeNodeFor(newElement);
+            }
 
             if (needsRefreshAndSave)
             {
                 GlueCommands.Self.DoOnUiThread(() =>
                 {
                     MainGlueWindow.Self.PropertyGrid.Refresh();
+
+                    if(hasInheritance)
+                    {
+                        // if it has inheritance then the tree item should update to show the triangle:
+                        GlueCommands.Self.RefreshCommands.RefreshTreeNodeFor(newElement);
+                    }
                 });
                 //var throwaway = GlueCommands.Self.GenerateCodeCommands.GenerateElementCodeAsync(newElement);
                 // Bases need to be generated because they may now contain the Type 
                 var throwaway = GlueCommands.Self.GenerateCodeCommands.GenerateElementCodeAsync(ObjectFinder.Self.GetRootBaseElement( newElement ));
                 GluxCommands.Self.SaveGlux();
             }
+
+
 
             return newElement;
         }
@@ -682,23 +694,57 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
             return hasTmx;
         }
 
+
+
         private async Task AddGameScreenOpposingTeamIndexCollisionRelationships(EntitySave newElement, AddEntityViewModel viewModel)
         {
-            var gameScreen = ObjectFinder.Self.GetScreenSave("GameScreen");
-
             var newTeamIndex = newElement.GetVariableValueRecursively("TeamIndex") as int?;
+            var newElementName = newElement.Name;
 
-            var newElementList = gameScreen.NamedObjects.FirstOrDefault(item => item.IsList && item.SourceClassGenericType == newElement.Name);
 
-            var isNewElementDamageable = viewModel.IsIDamageableChecked;
-            var isNewElementDamageArea = viewModel.IsIDamageAreaChecked;
-
+            var gameScreen = ObjectFinder.Self.GetScreenSave("GameScreen");
+            var newElementList = gameScreen.NamedObjects.FirstOrDefault(item => item.IsList && item.SourceClassGenericType == newElementName);
             ////////////////////////////Early Out///////////////////////////
-            if(newElementList == null)
+            if (newElementList == null)
             {
                 return;
             }
             /////////////////////////End Early Out//////////////////////////
+
+
+
+            var pairs = GetGameScreenOpposingTeamIndexCollisionPairs(newTeamIndex, newElementList, viewModel);
+
+            foreach(var pair in pairs)
+            {
+                var collisionRelationshipNos = await PluginManager.ReactToCreateCollisionRelationshipsBetween(pair.First, pair.Second);
+
+                if (collisionRelationshipNos != null)
+                {
+                    collisionRelationshipNos.SetProperty("IsDealDamageChecked", true);
+                    collisionRelationshipNos.SetProperty("IsDestroyFirstOnDamageChecked", true);
+                    collisionRelationshipNos.SetProperty("IsDestroySecondOnDamageChecked", true);
+                }
+            }
+        }
+
+
+        public List<OrderedNamedObjectPair> GetGameScreenOpposingTeamIndexCollisionPairs(int? newTeamIndex, NamedObjectSave newElementList, AddEntityViewModel viewModel)
+        {
+            List<OrderedNamedObjectPair> pairs = new List<OrderedNamedObjectPair>();
+
+            var isNewElementDamageable = viewModel.IsIDamageableChecked;
+            var isNewElementDamageArea = viewModel.IsIDamageAreaChecked;
+
+
+            var gameScreen = ObjectFinder.Self.GetScreenSave("GameScreen");
+
+            /////////////////early out//////////////////
+            if(gameScreen == null)
+            {
+                return pairs;
+            }
+            //////////////end early out///////////////////////
 
             var gameScreenNamedObjects = gameScreen.NamedObjects.ToArray();
             foreach (var item in gameScreenNamedObjects)
@@ -707,12 +753,12 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
                 var genericTypeName = item.SourceClassGenericType;
 
                 EntitySave entityForList = null;
-                if(!string.IsNullOrEmpty(genericTypeName))
+                if (!string.IsNullOrEmpty(genericTypeName))
                 {
                     entityForList = ObjectFinder.Self.GetEntitySave(genericTypeName);
                 }
 
-                if(entityForList != null)
+                if (entityForList != null)
                 {
                     var entityForListIndex = entityForList?.GetVariableValueRecursively("TeamIndex") as int?;
 
@@ -725,32 +771,23 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
                         (isEntityDamageable && isNewElementDamageArea) ||
                         (isEntityDamageArea && isNewElementDamageable);
 
-                    if(isCollidable && entityForListIndex != null && newTeamIndex != entityForListIndex && areApposingDamageInterfaces)
+                    if (isCollidable && entityForListIndex != null && newTeamIndex != entityForListIndex && areApposingDamageInterfaces)
                     {
                         // do it - add a collision relationship
                         // Damageable should be first since that's a standard we're pushing
-
-                        NamedObjectSave collisionRelationshipNos = null;
-
-                        if(isNewElementDamageable && isEntityDamageArea)
+                        if (isNewElementDamageable && isEntityDamageArea)
                         {
-                            collisionRelationshipNos = await PluginManager.ReactToCreateCollisionRelationshipsBetween(newElementList, item);
+                            pairs.Add(new OrderedNamedObjectPair { First = newElementList, Second = item });
                         }
                         else
                         {
-                            collisionRelationshipNos = await PluginManager.ReactToCreateCollisionRelationshipsBetween(item, newElementList );
-                        }
-
-                        if(collisionRelationshipNos != null)
-                        {
-                            collisionRelationshipNos.SetProperty("IsDealDamageChecked", true);
-                            collisionRelationshipNos.SetProperty("IsDestroyFirstOnDamageChecked", true);
-                            collisionRelationshipNos.SetProperty("IsDestroySecondOnDamageChecked", true);
+                            pairs.Add(new OrderedNamedObjectPair { First = item, Second = newElementList });
                         }
                     }
                 }
-
             }
+
+            return pairs;
         }
 
         public void AddEntity(EntitySave entitySave)

@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
@@ -601,7 +602,7 @@ namespace FlatRedBall.Input
         /// and analog inputs as buttons as these are often not intended to register
         /// as buttons. The defaults ensure back compat.
         /// </summary>
-        /// <param name="ignoreDirectionals">Whether to consider directions, such as the D-Pad, as buttons</param>
+        /// <param name="ignoreDirectionals">Whether to ignore directions, such as the D-Pad</param>
         /// <param name="ignoreAnalogs">Whether to consider analogs, such as triggers and sticks, as buttons</param>
         /// <returns>Whether any button was pushed.</returns>
         public bool AnyButtonPushed(bool ignoreDirectionals = false, bool ignoreAnalogs = false)
@@ -1403,13 +1404,13 @@ namespace FlatRedBall.Input
                 }
             }
 
-            if(!found)
+            if(!found && name != null)
             {
-                if(name?.Contains("Xbox") == true)
+                if(name.Contains("Xbox") == true)
                 {
                     GamepadLayout = GamepadLayout.Xbox360;
                 }
-                else if(name.Contains("Nintendo"))
+                else if(name.Contains("Nintendo") == true)
                 {
                     GamepadLayout = GamepadLayout.SwitchPro;
                 }
@@ -1675,7 +1676,19 @@ namespace FlatRedBall.Input
 
             if(mCapabilities.DisplayName == null || WasConnectedThisFrame)
             {
-                mCapabilities = Microsoft.Xna.Framework.Input.GamePad.GetCapabilities((int)mPlayerIndex);
+                // This can crash internally:
+                // System.NullReferenceException: Object reference not set to an instance of an object.
+                // at Microsoft.Xna.Framework.Input.GamePad.PlatformGetCapabilities(Int32 index)
+                // at Microsoft.Xna.Framework.Input.GamePad.GetCapabilities(Int32 index)
+                // We can survive without capabilities so let's tolerate this crash.
+                // February 19, 2023
+                // Potentially we want to check if this has crashed multiple times? Is this a one-time thing at the beginning
+                // or will it repeat? Not sure...
+                try
+                {
+                    mCapabilities = Microsoft.Xna.Framework.Input.GamePad.GetCapabilities((int)mPlayerIndex);
+                }
+                catch (NullReferenceException) { }
             }
 #else
             gamepadState = Microsoft.Xna.Framework.Input.GamePad.GetState(mPlayerIndex, GamePadDeadZone.None);

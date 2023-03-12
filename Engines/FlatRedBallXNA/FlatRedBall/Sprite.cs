@@ -817,7 +817,8 @@ namespace FlatRedBall
 #if DEBUG
                 if (AnimationChains.Contains(value) == false)
                 {
-                    throw new InvalidOperationException("The AnimationChains list does not contain the assigned AnimationChain, so it cannot be set");
+                    string message = $"The AnimationChains list {AnimationChains.Name} does not contain the assigned AnimationChain {value?.Name}, so it cannot be set";
+                    throw new InvalidOperationException(message);
                 }
 #endif
                 CurrentChainName = value?.Name;
@@ -1613,7 +1614,13 @@ namespace FlatRedBall
 
         void UpdateFrameBasedOffOfTimeIntoAnimation()
         {
+            if(double.IsPositiveInfinity(mTimeIntoAnimation))
+            {
+                mTimeIntoAnimation = 0;
+            }
             double timeIntoAnimation = mTimeIntoAnimation;
+
+            // Not sure how this can happen, but we want to make sure the engine doesn't freeze if it does
 
             if (timeIntoAnimation < 0)
             {

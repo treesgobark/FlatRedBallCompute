@@ -2,7 +2,6 @@
 #define THREAD_POOL_IS_SLOW
 #endif
 
-
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -437,11 +436,9 @@ namespace FlatRedBall
             }
         }
 
-        #region XML Docs
         /// <summary>
         /// Read-only collection of SpriteFrames managed by the SpriteManager.
         /// </summary>
-        #endregion
         public static ReadOnlyCollection<SpriteFrame> SpriteFrames
         {
             get { return mSpriteFramesReadOnly; }
@@ -557,7 +554,6 @@ namespace FlatRedBall
         #endregion
 
         #region Methods
-
  
         #region Constructor / Initialize
 
@@ -660,8 +656,6 @@ namespace FlatRedBall
 
 
         #endregion
-
-        #region Public Methods
 
         #region Add Methods
 
@@ -1357,28 +1351,6 @@ namespace FlatRedBall
                 return newSprite;
             }
         }
-
-        public static Sprite AddParticleSprite(Texture2D texture)
-        {
-            Sprite newParticleSprite = CreateParticleSprite(texture);
-            AddSprite(newParticleSprite);
-            return newParticleSprite;
-        }
-
-        /// <summary>
-        /// Returns a particle Sprite which is not managed internally by the engine. This is the most
-        /// efficient type of Sprite in FlatRedBall because it is pooled and the engine does not internally
-        /// update the sprite. 
-        /// </summary>
-        /// <param name="texture">The texture to assign to the sprite.</param>
-        /// <returns>The sprite, which may be returned from a pool of sprites.</returns>
-        public static Sprite AddManualParticleSprite(Texture2D texture)
-        {
-            Sprite newParticleSprite = CreateParticleSprite(texture);
-            AddManualSprite(newParticleSprite);
-            return newParticleSprite;
-        }
-
         public static Sprite AddManagedInvisibleSprite()
         {
 #if DEBUG
@@ -1424,6 +1396,46 @@ namespace FlatRedBall
                     new object[] { spriteToAdd }, timeToAdd);
 
             Instructions.InstructionManager.Instructions.Add(staticMethodInstruction);
+        }
+
+        #endregion
+
+        #region Add Particle Sprite
+
+        public static Sprite AddParticleSprite(AnimationChainList animations, string animationName = null)
+        {
+            var newParticleSprite = CreateParticleSprite(null);
+
+            newParticleSprite.AnimationChains = animations;
+            if(!string.IsNullOrEmpty(animationName))
+            {
+                newParticleSprite.CurrentChainName = animationName;
+                newParticleSprite.TimeIntoAnimation = 0;
+                newParticleSprite.Animate = true;
+            }
+            AddSprite(newParticleSprite);
+            return newParticleSprite;
+        }
+
+        public static Sprite AddParticleSprite(Texture2D texture)
+        {
+            Sprite newParticleSprite = CreateParticleSprite(texture);
+            AddSprite(newParticleSprite);
+            return newParticleSprite;
+        }
+
+        /// <summary>
+        /// Returns a particle Sprite which is not managed internally by the engine. This is the most
+        /// efficient type of Sprite in FlatRedBall because it is pooled and the engine does not internally
+        /// update the sprite. 
+        /// </summary>
+        /// <param name="texture">The texture to assign to the sprite.</param>
+        /// <returns>The sprite, which may be returned from a pool of sprites.</returns>
+        public static Sprite AddManualParticleSprite(Texture2D texture)
+        {
+            Sprite newParticleSprite = CreateParticleSprite(texture);
+            AddManualSprite(newParticleSprite);
+            return newParticleSprite;
         }
 
         #endregion
@@ -1659,6 +1671,7 @@ namespace FlatRedBall
 
         #endregion
 
+        #region AddPositionedObject
         public static void AddPositionedObject(PositionedObject positionedObjectToManage)
         {
 #if DEBUG
@@ -1678,6 +1691,9 @@ namespace FlatRedBall
             mManagedPositionedObjects.Add(positionedObjectToManage);
             //mManagedPositionedObjects.Add(positionedObjectToManage);
         }
+        #endregion
+
+        #region Add DrawableBatch
 
         /// <summary>
         /// Adds the argument IDrawableBatch to the engine to be rendered in order of its Z value.
@@ -1701,9 +1717,7 @@ namespace FlatRedBall
 #endif
             mDrawableBatches.Add(drawableBatch);
         }
-
         
-
         public static void AddZBufferedDrawableBatch(IDrawableBatch drawableBatch)
         {
 #if DEBUG
@@ -1723,6 +1737,10 @@ namespace FlatRedBall
         }
 
         #endregion
+
+        #endregion
+
+        #region Public Methods
 
         public static bool AreAnySpritesReferencingDisposedAssets()
         {
