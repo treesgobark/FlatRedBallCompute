@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 namespace AsepriteToAchx;
 
 
-public static partial class CollisionImporter
+public static class CollisionImporter
 {
     // public CollisionImporter((string name, ColorComponent component) category1,
     //     (string name, ColorComponent component) category2 = default,
@@ -62,11 +62,41 @@ public static partial class CollisionImporter
 
     public static void SetFrameCollisionForChainList(AnimationChainListSave chainList, AsepriteSheetData sheetData, AsepriteFile asepriteFile)
     {
-        var achFrames = chainList.AnimationChains.SelectMany(ch => ch.Frames).ToArray();
-        var sheetFrames = sheetData.Frames;
-        var asepriteFileFrames = asepriteFile.Frames.ToArray();
+        // var achFrames = chainList.AnimationChains.SelectMany(ch => ch.Frames).ToArray();
+        // var sheetFrames = sheetData.Frames;
+        // var asepriteFileFrames = asepriteFile.Frames.ToArray();
+        //
+        // SetMultipleFrameCollision(achFrames, sheetFrames, asepriteFileFrames);
+
+        var asepriteFileFrameList = asepriteFile.Frames.ToList();
+
+        var kek = sheetData.Meta.FrameTags
+            .Select(t => (TagName: t.Name, AseFileFrames: asepriteFileFrameList.GetRange(t.From, t.FrameCount)))
+            .ToDictionary(tuple => tuple.TagName, tuple => tuple.AseFileFrames);
         
-        SetMultipleFrameCollision(achFrames, sheetFrames, asepriteFileFrames);
+        foreach (var chain in chainList.AnimationChains)
+        {
+            var jsonDataForTag = sheetData.GetSheetsInTag(chain.Name).ToList();
+            var aseFileFramesForTag = kek[chain.Name];
+            SetFrameCollisionForChain(chain, jsonDataForTag, aseFileFramesForTag);
+        }
+    }
+
+    private static void SetFrameCollisionForChain(AnimationChainSave achChain,
+        IReadOnlyList<AseSheetFrame> jsonFrames,
+        IReadOnlyList<Frame> aseFileFrames)
+    {
+        int frameCount = achChain.Frames.Count;
+        
+        if (jsonFrames.Count != frameCount || aseFileFrames.Count != frameCount)
+        {
+            throw new ArgumentException("Frame lists must have same size as chain");
+        }
+        
+        for (int i = 0; i < frameCount; i++)
+        {
+            SetFrameCollision(achChain.Frames[i], jsonFrames[i], aseFileFrames[i]);
+        }
     }
 
     private static void SetMultipleFrameCollision(IReadOnlyList<AnimationFrameSave> achChain,

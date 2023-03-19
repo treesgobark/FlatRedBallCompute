@@ -285,6 +285,9 @@
 		<None Update="Content\FilesForAddNewFile\Bear.png">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
+		<None Update="Content\FilesForAddNewFile\ShaderTest.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
 		<None Update="Content\FilesForAddNewFile\EmptyXml.xml">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
@@ -295,6 +298,15 @@
 		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 		<None Update="Content\FilesForAddNewFile\SampleSound.wav">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Content\FilesForAddNewFile\DefaultSprite.fx">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Content\FilesForAddNewFile\ScreenSpaceSprite.fx">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Content\FilesForAddNewFile\WorldSpaceSprite.fx">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 		<None Update="Libraries\BMFont\bmfont.exe">

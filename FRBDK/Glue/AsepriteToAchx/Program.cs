@@ -11,7 +11,11 @@ using JsonSerializer = System.Text.Json.JsonSerializer;
 
 const string BaseDirectory = "InputFiles";
 const string AnimationFileName = "TestAnimations";
+// const string AsepriteFileName = "Robot96";
 const string AsepriteFileName = "Robot96";
+const string JsonFileName = "Robot96Attacks";
+const string JsonFrameFormat = "{tag}:{tagframe}";
+const bool NormalizeAnimationTimes = true;
 string projectPath = ProjectSourcePath.Value;
 string inputDirectory = Path.Combine(projectPath, "InputFiles");
 string outputDirectory = Path.Combine(projectPath, "OutputFiles");
@@ -25,7 +29,7 @@ SpritesheetOptions sheetOptions = new SpritesheetOptions
 };
 var spritesheet = asepriteFile.ToSpritesheet(sheetOptions);
 
-string jsonString = File.ReadAllText(Path.Combine(inputDirectory, AsepriteFileName + ".json"));
+string jsonString = File.ReadAllText(Path.Combine(inputDirectory, JsonFileName + ".json"));
 var options = new JsonSerializerOptions
 {
     PropertyNameCaseInsensitive = true,
@@ -33,9 +37,9 @@ var options = new JsonSerializerOptions
 var sheetData = JsonSerializer.Deserialize<AsepriteSheetData>(jsonString, options);
 
 // var newChainList = Mapper.Map(sheetData);
-var newChainList = Mapper.MapWithCollision(sheetData, asepriteFile);
+var newChainList = Mapper.MapWithCollision(sheetData, asepriteFile, NormalizeAnimationTimes);
 
 FileManager.XmlSerialize(newChainList, out string serializedChainList);
-File.WriteAllText(Path.Combine(outputDirectory, AsepriteFileName + "Generated.achx"), serializedChainList);
+File.WriteAllText(Path.Combine(outputDirectory, JsonFileName + "Generated.achx"), serializedChainList);
 
 Console.WriteLine();

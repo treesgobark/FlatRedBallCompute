@@ -10,9 +10,10 @@ namespace AsepriteToAchx;
 
 public static class Mapper
 {
-    #region Chain to Sheet
-    
-    public static AnimationChainListSave Map(AsepriteSheetData sheet, bool generateMirrors = true, bool applyAnimationDirection = true)
+    public static AnimationChainListSave Map(AsepriteSheetData sheet,
+        bool normalizeAnimationTime,
+        bool generateMirrors = true,
+        bool applyAnimationDirection = true)
     {
         AnimationChainListSave chainList = new()
         {
@@ -21,19 +22,32 @@ public static class Mapper
             CoordinateType = TextureCoordinateType.Pixel,
         };
 
-        foreach (AseFrameTag aseFrameTag in sheet.Meta.FrameTags)
+        var tagGroups = sheet.Frames
+            .GroupBy(f => f.TagName)
+            .Select(g => (tagName: g.Key, frames: g.ToArray()));
+
+        foreach (var tagFrames in tagGroups)
         {
-            AnimationChainSave mappedChain = Map(sheet.Frames,
-                aseFrameTag.From,
-                aseFrameTag.To,
-                aseFrameTag.Name,
-                sheet.Meta.Image);
+            AnimationChainSave mappedChain = Map(tagFrames.frames,
+                tagFrames.tagName,
+                sheet.Meta.Image,
+                normalizeChainDuration: normalizeAnimationTime);
             chainList.AnimationChains.Add(mappedChain);
         }
 
+        // foreach (AseFrameTag aseFrameTag in sheet.Meta.FrameTags)
+        // {
+        //     AnimationChainSave mappedChain = Map(sheet.Frames,
+        //         aseFrameTag.From,
+        //         aseFrameTag.To,
+        //         aseFrameTag.Name,
+        //         sheet.Meta.Image);
+        //     chainList.AnimationChains.Add(mappedChain);
+        // }
+
         if (applyAnimationDirection)
         {
-            ApplyAnimationDirectionToAllChains(chainList, sheet.Meta.FrameTags);
+            ApplyAnimationDirectionToAllChains(chainList, sheet.Meta);
         }
         
         if (generateMirrors)
@@ -46,15 +60,16 @@ public static class Mapper
 
     public static AnimationChainListSave MapWithCollision(AsepriteSheetData sheet,
         AsepriteFile asepriteFile,
+        bool normalizeAnimationTime,
         bool generateMirrors = true,
         bool applyAnimationDirection = true)
     {
-        AnimationChainListSave chainList = Map(sheet, false, false);
+        AnimationChainListSave chainList = Map(sheet, normalizeAnimationTime, false, false);
         CollisionImporter.SetFrameCollisionForChainList(chainList, sheet, asepriteFile);
 
         if (applyAnimationDirection)
         {
-            ApplyAnimationDirectionToAllChains(chainList, sheet.Meta.FrameTags);
+            ApplyAnimationDirectionToAllChains(chainList, sheet.Meta);
         }
             
         if (generateMirrors)
@@ -65,17 +80,16 @@ public static class Mapper
         return chainList;
     }
 
-    private static void ApplyAnimationDirectionToAllChains(AnimationChainListSave chainList, IReadOnlyList<AseFrameTag> metaFrameTags)
+    private static void ApplyAnimationDirectionToAllChains(AnimationChainListSave chainList, AseMetadata jsonMetaData)
     {
-        if (chainList.AnimationChains.Count != metaFrameTags.Count)
+        if (chainList.AnimationChains.Count > jsonMetaData.FrameTags.Length)
         {
-            throw new ArgumentException("The number of chains must match the number of tags.");
+            throw new ArgumentException("The number of chains must be less than the number of tags.");
         }
 
-        for (var index = 0; index < chainList.AnimationChains.Count; index++)
+        foreach (AnimationChainSave chain in chainList.AnimationChains)
         {
-            AnimationChainSave chain = chainList.AnimationChains[index];
-            AseFrameTag tag = metaFrameTags[index];
+            AseFrameTag tag = jsonMetaData.TagLookup[chain.Name];
             chain.Frames = ApplyAnimationDirection(chain.Frames, tag.Direction).ToList();
         }
     }
@@ -85,6 +99,7 @@ public static class Mapper
         int endingIndexInclusive,
         string chainName,
         string textureName,
+        bool normalizeChainDuration,
         bool flipHorizontal = false,
         bool flipVertical = false)
     {
@@ -92,18 +107,55 @@ public static class Mapper
         {
             Name = chainName,
         };
+
+        float? frameDurationOverride = null;
+        if (normalizeChainDuration)
+        {
+            frameDurationOverride = 1f / (endingIndexInclusive + 1 - startingIndex);
+        }
         
         for (var index = startingIndex; index <= endingIndexInclusive; index++)
         {
             AseSheetFrame aseFrame = aseFrames[index];
-            AnimationFrameSave mappedFrame = Map(aseFrame, textureName, flipHorizontal, flipVertical);
+            AnimationFrameSave mappedFrame = Map(aseFrame, textureName, flipHorizontal, flipVertical, frameDurationOverride);
             chain.Frames.Add(mappedFrame);
         }
 
         return chain;
     }
 
-    private static AnimationFrameSave Map(AseSheetFrame aseFrame, string textureName, bool flipHorizontal, bool flipVertical)
+    private static AnimationChainSave Map(AseSheetFrame[] aseFrames,
+        string chainName,
+        string textureName,
+        bool normalizeChainDuration,
+        bool flipHorizontal = false,
+        bool flipVertical = false)
+    {
+        AnimationChainSave chain = new()
+        {
+            Name = chainName,
+        };
+
+        float? frameDurationOverride = null;
+        if (normalizeChainDuration)
+        {
+            frameDurationOverride = 1f / aseFrames.Length;
+        }
+        
+        foreach (AseSheetFrame aseFrame in aseFrames)
+        {
+            AnimationFrameSave mappedFrame = Map(aseFrame, textureName, flipHorizontal, flipVertical, frameDurationOverride);
+            chain.Frames.Add(mappedFrame);
+        }
+
+        return chain;
+    }
+
+    private static AnimationFrameSave Map(AseSheetFrame aseFrame,
+        string textureName,
+        bool flipHorizontal,
+        bool flipVertical,
+        float? frameDurationOverride = null)
     {
         int trimmedFromLeft = aseFrame.SpriteSourceSize.X;
         int trimmedFromRight = aseFrame.SourceSize.W - (aseFrame.SpriteSourceSize.X + aseFrame.SpriteSourceSize.W);
@@ -114,7 +166,7 @@ public static class Mapper
             FlipHorizontal = flipHorizontal,
             FlipVertical = flipVertical,
             TextureName = textureName,
-            FrameLength = (float)aseFrame.SpanDuration.TotalSeconds,
+            FrameLength = frameDurationOverride ?? (float)aseFrame.SpanDuration.TotalSeconds,
             LeftCoordinate = aseFrame.Frame.X,
             RightCoordinate = aseFrame.Frame.X + aseFrame.Frame.W,
             TopCoordinate = aseFrame.Frame.Y,
@@ -125,8 +177,6 @@ public static class Mapper
         
         return frbFrame;
     }
-    
-    #endregion
     
     public static AsepriteSheetData Map(AnimationChainListSave chainList)
     {
