@@ -617,7 +617,10 @@ namespace FlatRedBall.IO
             }
             finally
             {
-                Close(fileStream);
+                if(fileStream != null)
+                {
+                    Close(fileStream);
+                }
 
             }
 
@@ -1121,6 +1124,12 @@ namespace FlatRedBall.IO
                     // just have to make sure that the filename includes the path
                     fileName = fileName.ToLowerInvariant().Replace('\\', '/');
                     directory = directory.ToLowerInvariant().Replace('\\', '/');
+
+                    if(directory.EndsWith("/") == false)
+                    {
+                        // Do this to simplify the code below by allowing a "contains" call
+                        directory += "/";
+                    }
 
                     return fileName.IndexOf(directory) == 0;
                 }

@@ -17,9 +17,22 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows;
+using System.Windows.Media;
 
 namespace OfficialPlugins.TreeViewPlugin.ViewModels
 {
+    #region BookmarkViewModel
+
+    class BookmarkViewModel
+    {
+        public string Text { get; set; }
+        public ImageSource ImageSource { get; set; }
+
+        public override string ToString() => Text;
+    }
+
+    #endregion
+
     class MainTreeViewViewModel : ViewModel, ISearchBarViewModel
     {
         #region Search-related
@@ -170,6 +183,49 @@ namespace OfficialPlugins.TreeViewPlugin.ViewModels
 
         #endregion
 
+        #region Bookmark
+
+        public bool IsBookmarkListVisible
+        {
+            get => Get<bool>();
+            set
+            {
+                if (Set(value))
+                {
+                    if(value== false)
+                    {
+                        OldBookmarkRowHeight = BookmarkRowHeight;
+                        BookmarkRowHeight = new GridLength(0, GridUnitType.Pixel);
+                    }
+                    else
+                    {
+                        BookmarkRowHeight = OldBookmarkRowHeight;
+                    }
+                }
+            }
+        }
+
+        [DependsOn(nameof(IsBookmarkListVisible))]
+        public Visibility BookmarkListVisibility => IsBookmarkListVisible.ToVisibility();
+
+        public ObservableCollection<BookmarkViewModel> Bookmarks { get; private set; } = new ObservableCollection<BookmarkViewModel>();
+
+        public BookmarkViewModel SelectedBookmark
+        {
+            get => Get<BookmarkViewModel>();
+            set => Set(value);
+        }
+
+        public GridLength OldBookmarkRowHeight { get; set; }
+
+        public GridLength BookmarkRowHeight
+        {
+            get=> Get<GridLength>();
+            set => Set(value);
+        }
+
+        #endregion
+
         public MainTreeViewViewModel()
         {
             ScreenRootNode =
@@ -187,6 +243,8 @@ namespace OfficialPlugins.TreeViewPlugin.ViewModels
                 ScreenRootNode,
                 GlobalContentRootNode,
             };
+
+            BookmarkRowHeight = GridLength.Auto;
 
             PushSearchToContainedObject();
 
@@ -426,6 +484,25 @@ namespace OfficialPlugins.TreeViewPlugin.ViewModels
             AddDirectoryNodes(contentDirectory + "GlobalContent/", GlobalContentRootNode);
         }
 
+        public void RefreshBookmarks()
+        {
+            Bookmarks.Clear();
+            var project = GlueState.Self.CurrentGlueProject;
+
+            if(project?.Bookmarks == null)
+            {
+                return;
+            }
+
+            foreach(var bookmark in project.Bookmarks)
+            {
+                var vm = new BookmarkViewModel();
+                vm.Text = bookmark.Name;
+                vm.ImageSource = NodeViewModel.FromSource(bookmark.ImageSource);
+                this.Bookmarks.Add(vm);
+            }
+        }
+
         #endregion
 
         private NodeViewModel AddEntityTreeNode(EntitySave entitySave)
@@ -598,6 +675,7 @@ namespace OfficialPlugins.TreeViewPlugin.ViewModels
             {
                 node.CollapseRecursively();
             }
+
         }
 
         internal void CollapseToDefinitions()

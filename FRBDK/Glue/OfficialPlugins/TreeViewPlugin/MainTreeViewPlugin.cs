@@ -12,6 +12,7 @@ using OfficialPlugins.TreeViewPlugin.Views;
 using PropertyTools.Wpf;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.Text;
 using System.Windows.Forms;
@@ -42,6 +43,16 @@ namespace OfficialPlugins.TreeViewPlugin
 
         public override void StartUp()
         {
+            var pixelHeight = GlueState.Self.GlueSettingsSave.BookmarkRowHeight > 0
+                ? GlueState.Self.GlueSettingsSave.BookmarkRowHeight
+                : 100;
+            MainViewModel.OldBookmarkRowHeight = new System.Windows.GridLength(
+                pixelHeight, System.Windows.GridUnitType.Pixel);
+
+            MainViewModel.IsBookmarkListVisible = GlueState.Self.GlueSettingsSave.IsBookmarksListVisible;
+
+            MainViewModel.PropertyChanged += HandleMainViewModelPropertyChanged;
+
             var findManager = new FindManager(MainViewModel);
             GlueState.Self.Find = findManager;
             mainView = new MainTreeViewControl();
@@ -56,6 +67,30 @@ namespace OfficialPlugins.TreeViewPlugin
             pluginTab.CanClose = false;
             AssignEvents();
 
+        }
+
+        private void HandleMainViewModelPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            switch(e.PropertyName)
+            {
+                case nameof(MainViewModel.IsBookmarkListVisible):
+                case nameof(MainViewModel.BookmarkRowHeight):
+                    if(GlueState.Self.GlueSettingsSave != null)
+                    {
+                        GlueState.Self.GlueSettingsSave.IsBookmarksListVisible = MainViewModel.IsBookmarkListVisible;
+                        if(MainViewModel.IsBookmarkListVisible)
+                        {
+                            GlueState.Self.GlueSettingsSave.BookmarkRowHeight = MainViewModel.BookmarkRowHeight.Value;
+                        }
+                        else
+                        {
+                            GlueState.Self.GlueSettingsSave.BookmarkRowHeight = MainViewModel.OldBookmarkRowHeight.Value;
+                        }
+                        GlueCommands.Self.GluxCommands.SaveSettings();
+
+                    }
+                    break;
+            }
         }
 
         private void AssignEvents()
@@ -194,6 +229,7 @@ namespace OfficialPlugins.TreeViewPlugin
             pluginTab.Show();
             MainViewModel.AddDirectoryNodes();
             MainViewModel.RefreshGlobalContentTreeNodes();
+            MainViewModel.RefreshBookmarks();
 
         }
 
@@ -288,5 +324,15 @@ namespace OfficialPlugins.TreeViewPlugin
         {
             mainView.FocusSearchBox();
         }
+
+        #region Bookmarks
+
+        public void AddBookmark(ITreeNode treeNode)
+        {
+            mainView.AddBookmark(treeNode);
+            MainViewModel.IsBookmarkListVisible = true;
+        }
+
+        #endregion
     }
 }

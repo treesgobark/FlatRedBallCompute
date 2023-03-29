@@ -47,6 +47,7 @@ using FlatRedBall.Glue.Utilities;
 using GlueFormsCore.ViewModels;
 using FlatRedBall.Glue.Plugins.ExportedInterfaces;
 using System.Security.Cryptography;
+using System.Windows.Media.Imaging;
 
 namespace FlatRedBall.Glue.FormHelpers
 {
@@ -426,6 +427,18 @@ namespace FlatRedBall.Glue.FormHelpers
             }
         }
 
+        public string GetRelativeTreeNodePath()
+        {
+            if(Parent != null)
+            {
+                return Parent.GetRelativeTreeNodePath() + "/" + this.Text;
+            }
+            else
+            {
+                return this.Text;
+            }
+        }
+
         ITreeNode FindByName(string name);
 
         void RemoveGlobalContentTreeNodesIfDoesntExist(ITreeNode treeNode);
@@ -524,8 +537,18 @@ namespace FlatRedBall.Glue.FormHelpers
         static List<GeneralToolStripMenuItem> ListToAddTo = null;
         #endregion
 
+
+        #region Images
+
+        static System.Windows.Controls.Image BookmarkImage;
+
+        #endregion
+
         private static void PopulateRightClickMenuItemsShared(ITreeNode targetNode, MenuShowingAction menuShowingAction, ITreeNode draggedNode)
         {
+            CreateImages();
+
+
 
             #region IsScreenNode
 
@@ -968,6 +991,42 @@ namespace FlatRedBall.Glue.FormHelpers
             }
 
             #endregion
+
+            #region All Nodes
+
+            if(menuShowingAction == MenuShowingAction.RegularRightClick)
+            {
+                AddSeparator();
+                Add("Bookmark", () => PluginManager.CallPluginMethod("Tree View Plugin", "AddBookmark", targetNode), image: BookmarkImage);
+            }
+
+            #endregion
+        }
+
+        static bool HasCreatedImages = false;
+        private static void CreateImages()
+        {
+            if(!HasCreatedImages)
+            {
+                
+                BookmarkImage = MakeImage("/Content/Icons/StarFilled.png");
+                
+
+                HasCreatedImages = true;
+            }
+            System.Windows.Controls.Image MakeImage(string sourceName)
+            {
+                var bitmapImage = new BitmapImage();
+                bitmapImage.BeginInit();
+                bitmapImage.UriSource = new Uri(sourceName, UriKind.Relative);
+                bitmapImage.EndInit();
+
+                return new System.Windows.Controls.Image()
+                {
+                    Source = bitmapImage
+                };
+            }
+
         }
 
         private static void HandleOpen(ITreeNode targetNode)
@@ -1005,7 +1064,7 @@ namespace FlatRedBall.Glue.FormHelpers
 
         #region Utility Methods
 
-        static void Add(string text, Action action, string shortcutDisplay = null)
+        static void Add(string text, Action action, string shortcutDisplay = null, System.Windows.Controls.Image image = null)
         {
             if (ListToAddTo != null)
             {
@@ -1015,6 +1074,8 @@ namespace FlatRedBall.Glue.FormHelpers
                     Click = (not, used) => action(),
                     ShortcutKeyDisplayString = shortcutDisplay
                 };
+
+                item.Image = image;
 
                 ListToAddTo.Add(item);
             }

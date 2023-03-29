@@ -128,6 +128,8 @@ namespace FlatRedBall.Glue.SaveClasses
 
         public List<PropertySave> Properties = new List<PropertySave>();
 
+        public bool IsBookmarksListVisible { get; set; }
+        public double BookmarkRowHeight { get; set; }
 
         #endregion
 
