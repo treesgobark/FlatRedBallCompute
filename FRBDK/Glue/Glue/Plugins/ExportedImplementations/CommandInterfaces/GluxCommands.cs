@@ -148,13 +148,19 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
 
         #region Save Glux Methods
 
-        /// <summary>
-        /// Saves the glux/gluj (and all elements) in a task.
-        /// </summary>
+        [Obsolete("Use SaveProjectAndElements since it more clearly explains what it does.")]
         public void SaveGlux(TaskExecutionPreference taskExecutionPreference = TaskExecutionPreference.Asap)
         {
+            SaveProjectAndElements(taskExecutionPreference);
+        }
+
+        /// <summary>
+        /// Saves the gluj (and all elements) in a task.
+        /// </summary>
+        public void SaveProjectAndElements(TaskExecutionPreference taskExecutionPreference = TaskExecutionPreference.Asap)
+        { 
             TaskManager.Self.Add(
-                () => SaveGlueProjectImmediately(),
+                () => SaveProjectAndElementsImmediately(),
                 "Saving Glue Project",
                 // asap because otherwise this may get added
                 // after a reload command
@@ -183,7 +189,33 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
                     settings.Formatting = Formatting.Indented;
                     settings.DefaultValueHandling = DefaultValueHandling.Ignore;
 
-                    var serialized = JsonConvert.SerializeObject(element, settings);
+                    GlueElement clone = null;
+
+                    if(element is ScreenSave asScreenSave)
+                    {
+                        clone = asScreenSave.Clone();
+                    }
+                    else if(element is EntitySave asEntitySave)
+                    {
+                        clone = asEntitySave.Clone();
+                    }
+
+                    if(GlueState.Self.CurrentGlueProject.FileVersion >= 
+                        (int) GlueProjectSave.GluxVersions.RemoveRedundantDerivedData)
+                    {
+                        if (!string.IsNullOrEmpty(clone.BaseElement))
+                        {
+                            var baseElements = ObjectFinder.Self.GetAllBaseElementsRecursively(clone);
+                            if (baseElements.Count > 0)
+                            {
+                                GlueProjectSaveExtensions.RemoveRedundantDerivedData(clone, baseElements);
+                            }
+
+                        }
+                    }
+
+
+                    var serialized = JsonConvert.SerializeObject(clone, settings);
 
                     var locationToSave = glueDirectory + element.Name + "." + extension;
 
@@ -226,12 +258,20 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
             }
         }
 
+        [Obsolete("Use SaveEverythingImmediately because it more clearly " +
+            "indicates that everything (main project and all screens/entities) are saved")]
+        public void SaveGlueProjectImmediately()
+        {
+            SaveProjectAndElementsImmediately();
+        }
+
+
         /// <summary>
         /// Saves the current project immediately - this should not 
         /// be called except in very rare circumstances as it will run right away and may result
         /// in multiple threads accessing the glux at the same time.
         /// </summary>
-        public void SaveGlueProjectImmediately()
+        public void SaveProjectAndElementsImmediately()
         {
             if (ProjectManager.GlueProjectSave != null)
             {
@@ -1448,7 +1488,7 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
         public async Task AddNamedObjectToAsync(NamedObjectSave newNos, GlueElement element, NamedObjectSave listToAddTo = null, bool selectNewNos = true,
              bool performSaveAndGenerateCode = true, bool updateUi = true)
         {
-            await TaskManager.Self.AddAsync(() =>
+            await TaskManager.Self.AddAsync(async () =>
             {
                 var ati = newNos.GetAssetTypeInfo();
 
@@ -1506,7 +1546,7 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
                 PluginManager.ReactToNewObject(newNos);
                 if (listToAddTo != null)
                 {
-                    PluginManager.ReactToObjectContainerChanged(newNos, listToAddTo);
+                    await PluginManager.ReactToObjectContainerChanged(newNos, listToAddTo);
                 }
 
                 if (updateUi)
@@ -2547,6 +2587,35 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
             
         }
 
+        public async Task CopyCustomVariableToGlueElement(CustomVariable original, GlueElement toElement)
+        {
+            await TaskManager.Self.AddAsync(async () =>
+            {
+                CustomVariable newVariable = original.Clone();
+                if (!newVariable.Name.EndsWith("Copy") && toElement.GetCustomVariable(newVariable.Name) != null)
+                {
+                    newVariable.Name = original.Name + "Copy";
+                }
+                while (toElement.GetCustomVariable(newVariable.Name) != null)
+                {
+                    newVariable.Name = StringFunctions.IncrementNumberAtEnd(newVariable.Name);
+                }
+
+                if (!original.IsTunneling)
+                {
+                    await GlueCommands.Self.GluxCommands.EntityCommands.AddCustomVariableToElementAsync(newVariable, toElement);
+                }
+                else if (original.IsTunneling && toElement.GetNamedObject(original.SourceObject) != null)
+                {
+                    await GlueCommands.Self.GluxCommands.EntityCommands.AddCustomVariableToElementAsync(newVariable, toElement);
+                }
+                else
+                {
+                    GlueGui.ShowMessageBox($"{original.Name} is a tunneled variable and {toElement.Name} does not have a {original.SourceObject} to tunnel.");
+                }
+            }, $"Adding copy of {original}");
+        }
+
         #endregion
 
         #region StateSaveCategory
@@ -2667,39 +2736,7 @@ namespace FlatRedBall.Glue.Plugins.ExportedImplementations.CommandInterfaces
 
         #endregion
 
-        #region CustomVariable
-
-        public async Task CopyCustomVariableToGlueElement(CustomVariable original, GlueElement toElement)
-        {
-            await TaskManager.Self.AddAsync(async () =>
-            {
-                CustomVariable newVariable = original.Clone();
-                if (!newVariable.Name.EndsWith("Copy") && toElement.GetCustomVariable(newVariable.Name) != null)
-                {
-                    newVariable.Name = original.Name + "Copy";
-                }
-                while (toElement.GetCustomVariable(newVariable.Name) != null)
-                {
-                    newVariable.Name = StringFunctions.IncrementNumberAtEnd(newVariable.Name);
-                }
-
-                if (!original.IsTunneling)
-                {
-                    await GlueCommands.Self.GluxCommands.EntityCommands.AddCustomVariableToElementAsync(newVariable, toElement);
-                }
-                else if (original.IsTunneling && toElement.GetNamedObject(original.SourceObject) != null)
-                {
-                    await GlueCommands.Self.GluxCommands.EntityCommands.AddCustomVariableToElementAsync(newVariable, toElement);
-                }
-                else
-                {
-                    GlueGui.ShowMessageBox($"{original.Name} is a tunneled variable and {toElement.Name} does not have a {original.SourceObject} to tunnel.");
-                }
-            }, $"Adding copy of {original}");
-        }
-
-        #endregion
-
+        
         #region Entity
 
         private static bool MoveEntityCodeFilesToDirectory(EntitySave entitySave, string targetDirectory)

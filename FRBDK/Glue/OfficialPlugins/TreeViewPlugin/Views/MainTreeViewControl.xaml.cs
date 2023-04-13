@@ -23,6 +23,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Xceed.Wpf.Toolkit.Primitives;
 
 namespace OfficialPlugins.TreeViewPlugin.Views
 {
@@ -177,6 +178,8 @@ namespace OfficialPlugins.TreeViewPlugin.Views
                 nodeWaitingOnSelection = nodePushed;
                 // don't select anything (yet)
                 e.Handled = true;
+
+                MainTreeView.Focus();
             }
         }
 
@@ -319,7 +322,7 @@ namespace OfficialPlugins.TreeViewPlugin.Views
                 }
                 else
                 {
-                    SelectionLogic.SelectByTag(targetNode.Tag);
+                    SelectionLogic.SelectByTag(targetNode.Tag, false);
 
                     var items = RightClickHelper.GetRightClickItems(targetNode, MenuShowingAction.RightButtonDrag, nodePushed);
 
@@ -378,6 +381,60 @@ namespace OfficialPlugins.TreeViewPlugin.Views
             nodeWaitingOnSelection = null;
         }
 
+
+        private void MainTreeView_DragOver(object sender, DragEventArgs e)
+        {
+            ListBox li = sender as ListBox;
+            ScrollViewer sv = FindVisualChild<ScrollViewer>(li);
+
+            double tolerance = 24;
+            double verticalPos = e.GetPosition(li).Y;
+
+            double topMargin = tolerance;
+            var bottomMargin = li.ActualHeight - tolerance;
+            if(sv.ComputedHorizontalScrollBarVisibility == Visibility.Visible)
+            {
+                var horizontalScrollBar = sv.Template.FindName("PART_HorizontalScrollBar", sv) as System.Windows.Controls.Primitives.ScrollBar;
+
+                if(horizontalScrollBar != null)
+                {
+                    bottomMargin -= horizontalScrollBar.ActualHeight;
+                }
+            }
+
+            double distanceToScroll = 3;
+            if (verticalPos < topMargin) // Top of visible list?
+            {
+                sv.ScrollToVerticalOffset(sv.VerticalOffset - distanceToScroll); //Scroll up.
+            }
+            else if (verticalPos > bottomMargin) //Bottom of visible list?
+            {
+                sv.ScrollToVerticalOffset(sv.VerticalOffset + distanceToScroll); //Scroll down.    
+            }
+        }
+
+        public static childItem FindVisualChild<childItem>(DependencyObject obj) where childItem : DependencyObject
+        {
+            // Search immediate children first (breadth-first)
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(obj); i++)
+            {
+                DependencyObject child = VisualTreeHelper.GetChild(obj, i);
+
+                if (child != null && child is childItem)
+                    return (childItem)child;
+
+                else
+                {
+                    childItem childOfChild = FindVisualChild<childItem>(child);
+
+                    if (childOfChild != null)
+                        return childOfChild;
+                }
+            }
+
+            return null;
+        }
+
         #endregion
 
         #region Selection
@@ -386,6 +443,8 @@ namespace OfficialPlugins.TreeViewPlugin.Views
         {
             if(nodeWaitingOnSelection != null)
             {
+                ViewModel.DeselectResursively();
+
                 nodeWaitingOnSelection.IsSelected = true;
                 nodeWaitingOnSelection = null;
             }
@@ -417,6 +476,23 @@ namespace OfficialPlugins.TreeViewPlugin.Views
             }
         }
 
+        private void Bookmarks_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var objectPushed = e.OriginalSource;
+            var frameworkElementPushed = (objectPushed as FrameworkElement);
+            var nodeViewModel = frameworkElementPushed?.DataContext as BookmarkViewModel;
+            if(nodeViewModel != null)
+            {
+                var separated = nodeViewModel.Text.Split('/').ToList();
+
+                var node = GetTreeNode(separated);
+
+                if(node != null)
+                {
+                    GlueCommands.Self.TreeNodeCommands.HandleTreeNodeDoubleClicked(node);
+                }
+            }
+        }
         #endregion
 
         #region Back/Forward navigation
@@ -461,7 +537,7 @@ namespace OfficialPlugins.TreeViewPlugin.Views
             ViewModel.GlobalContentRootNode.IsExpanded = false;
             if (whatWasSelected != null)
             {
-                SelectionLogic.SelectByTag(whatWasSelected);
+                SelectionLogic.SelectByTag(whatWasSelected, false);
                 SelectionLogic.CurrentNode?.ExpandParentsRecursively();
             }
         }

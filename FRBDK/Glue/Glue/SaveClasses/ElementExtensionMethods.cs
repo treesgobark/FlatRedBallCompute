@@ -303,7 +303,7 @@ namespace FlatRedBall.Glue.SaveClasses
                 newCustomVariables = new List<CustomVariable>();
             }
 
-            // See if there are any objects to be removed.
+            // See if there are any variables to be removed.
             for (int i = customVariablesBeforeUpdate.Count - 1; i > -1; i--)
             {
                 bool contains = false;
@@ -373,9 +373,31 @@ namespace FlatRedBall.Glue.SaveClasses
 
                         customVariable.DefinedByBase = true;
                         // We'll assume that this thing is going to be the acutal definition
-                        customVariable.SetByDerived = false;
+                        // Update April 11, 2023
+                        // Setting this to false doesn't
+                        // prevent this from being the final
+                        // definition. We want the SetByDerived
+                        // to be true so that the derived variable
+                        // can get removed when saving the .json file.
+                        //customVariable.SetByDerived = false;
+                        customVariable.SetByDerived = true;
 
-                        elementToUpdate.CustomVariables.Add(customVariable);
+                        var indexToInsertAt = elementToUpdate.CustomVariables.Count;
+                        if(i == 0)
+                        {
+                            indexToInsertAt = 0;
+                        }
+                        else
+                        {
+                            var itemBefore = newCustomVariables[i-1];
+                            var withMatchingName = elementToUpdate.CustomVariables.Find(item => item.Name == itemBefore.Name);
+                            if(withMatchingName != null)
+                            {
+                                indexToInsertAt = 1 + elementToUpdate.CustomVariables.IndexOf(withMatchingName);
+                            }
+                        }
+
+                        elementToUpdate.CustomVariables.Insert(indexToInsertAt, customVariable);
                     }
                 }
             }

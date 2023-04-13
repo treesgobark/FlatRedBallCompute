@@ -1227,6 +1227,33 @@ namespace FlatRedBall.Glue.Plugins
             TabControlViewModel.IsRecordingSelection = true;
         }
 
+        internal static void ReactToItemsSelected(List<ITreeNode> selectedTreeNodes)
+        {
+            TabControlViewModel.IsRecordingSelection = false;
+            // Tabs will be added and removed here, and that can cause the selection to change.
+            // We don't want the selection change to cause the TabControlViewModel to consider these
+            // clicks, so let's tell it to ignore these for now...
+
+            var first = selectedTreeNodes.FirstOrDefault();
+
+            CallMethodOnPlugin(
+                plugin =>
+                {
+                    if(plugin.ReactToItemsSelected != null)
+                    {
+                        plugin.ReactToItemsSelected(selectedTreeNodes);
+                    }
+                    else
+                    {
+                        plugin.ReactToItemSelectHandler(first);
+                    }
+                },
+                plugin => plugin.ReactToItemSelectHandler != null || plugin.ReactToItemsSelected != null);
+
+            TabControlViewModel.UpdateToSelection(first);
+            TabControlViewModel.IsRecordingSelection = true;
+        }
+
         internal static void ReactToPropertyGridRightClick(System.Windows.Forms.PropertyGrid rightClickedPropertyGrid, ContextMenuStrip menuToModify)
         {
             CallMethodOnPlugin(
@@ -2085,10 +2112,19 @@ namespace FlatRedBall.Glue.Plugins
             
 
 
-        public static void ReactToObjectContainerChanged(NamedObjectSave objectMoved, NamedObjectSave newContainer) =>
-            CallMethodOnPlugin(
-                plugin => plugin.ReactToObjectContainerChanged(objectMoved, newContainer),
-                plugin => plugin.ReactToObjectContainerChanged != null);
+        public static Task ReactToObjectContainerChanged(NamedObjectSave objectMoved, NamedObjectSave newContainer)
+        {
+            var wrapper = new List<ObjectContainerChange>();
+
+            var item = new ObjectContainerChange();
+            item.ObjectMoved = objectMoved;
+            item.NewContainer = newContainer;
+
+            wrapper.Add(item);
+
+            return ReactToObjectListContainerChanged(wrapper);
+
+        }
 
         public static void ReactToMainWindowMoved()
         {

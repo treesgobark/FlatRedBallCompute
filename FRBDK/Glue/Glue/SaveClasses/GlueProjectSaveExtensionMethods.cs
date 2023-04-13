@@ -527,6 +527,7 @@ namespace FlatRedBall.Glue.SaveClasses
             }
         }
 
+
         public static void FixNamedObjects(this GlueProjectSave glueProjectSave)
         {
             glueProjectSave.SearchForDuplicateNamedObjects();
@@ -535,7 +536,7 @@ namespace FlatRedBall.Glue.SaveClasses
 
             glueProjectSave.FixAttachmentProperties();
 
-            glueProjectSave.FixMissingDerivedNamedObjects();
+            glueProjectSave.FixMissingDerivedNamedObjectsAndVariables();
         }
 
 
@@ -586,7 +587,7 @@ namespace FlatRedBall.Glue.SaveClasses
             }
         }
 
-        public static void FixMissingDerivedNamedObjects(this GlueProjectSave instance)
+        public static void FixMissingDerivedNamedObjectsAndVariables(this GlueProjectSave instance)
         {
             foreach (var screen in instance.Screens)
             {

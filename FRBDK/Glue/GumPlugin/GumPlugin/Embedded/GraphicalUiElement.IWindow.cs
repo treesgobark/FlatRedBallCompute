@@ -1015,7 +1015,7 @@ namespace Gum.Wireframe
             return updated;
         }
 
-        private object ConvertValue(object value, Type desiredType, string format)
+        public static object ConvertValue(object value, Type desiredType, string format)
         {
             object convertedValue = value;
             if (desiredType == typeof(string))
@@ -1084,6 +1084,10 @@ namespace Gum.Wireframe
                 else if (value is decimal asDecimal)
                 {
                     convertedValue = (float)asDecimal;
+                }
+                else if(value is string asString)
+                {
+                    convertedValue = float.TryParse(asString, out float result) ? result : 0;
                 }
             }
             return convertedValue;

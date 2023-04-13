@@ -1719,7 +1719,7 @@ namespace FlatRedBall.Math.Geometry
 
                 for (int j = 0; j < shapeCollection.AxisAlignedRectangles.Count; j++)
                 {
-                    returnValue |= shape.CollideAgainstMoveSoft(shapeCollection.AxisAlignedRectangles[j], otherMass, thisMass, separationVelocity);
+                    returnValue |= shape.CollideAgainstMoveSoft(shapeCollection.AxisAlignedRectangles[j], thisMass, otherMass, separationVelocity);
                 }
             }
 
@@ -1751,6 +1751,100 @@ namespace FlatRedBall.Math.Geometry
             for (int i = 0; i < Polygons.Count; i++)
             {
                 returnValue |= polygon.CollideAgainstMoveSoft(Polygons[i], otherMass, thisMass, separationVelocity);
+            }
+
+            mSuppressLastCollisionClear = false;
+            return returnValue;
+        }
+
+        public bool CollideAgainstMovePositionSoft(ShapeCollection shapeCollection, float thisMass, float otherMass, float separationVelocity)
+        {
+            mSuppressLastCollisionClear = true;
+            bool returnValue = false;
+
+            // Currently we only support AARect vs AARect,
+            // Polygon vs AARect and Polygon vs Polygon.
+
+            // AARect vs AARect
+            for (int i = 0; i < shapeCollection.AxisAlignedRectangles.Count; i++)
+            {
+                var shape = shapeCollection.AxisAlignedRectangles[i];
+
+                for (int j = 0; j < AxisAlignedRectangles.Count; j++)
+                {
+                    returnValue |= shape.CollideAgainstMovePositionSoft(AxisAlignedRectangles[j], otherMass, thisMass, separationVelocity);
+                }
+            }
+
+            // Other Polygon vs this AARect
+            for (int i = 0; i < shapeCollection.Polygons.Count; i++)
+            {
+                var shape = shapeCollection.Polygons[i];
+
+                for (int j = 0; j < AxisAlignedRectangles.Count; j++)
+                {
+                    returnValue |= shape.CollideAgainstMovePositionSoft(AxisAlignedRectangles[j], otherMass, thisMass, separationVelocity);
+                }
+            }
+
+            // This Polygon vs other AARect
+            for (int i = 0; i < Polygons.Count; i++)
+            {
+                var shape = Polygons[i];
+
+                for (int j = 0; j < shapeCollection.AxisAlignedRectangles.Count; j++)
+                {
+                    returnValue |= shape.CollideAgainstMovePositionSoft(shapeCollection.AxisAlignedRectangles[j], thisMass, otherMass, separationVelocity);
+                }
+            }
+
+            // Polygon vs Polygon
+            for (int i = 0; i < shapeCollection.Polygons.Count; i++)
+            {
+                var shape = shapeCollection.Polygons[i];
+
+                for (int j = 0; j < Polygons.Count; j++)
+                {
+                    returnValue |= shape.CollideAgainstMovePositionSoft(Polygons[j], otherMass, thisMass, separationVelocity);
+                }
+            }
+
+            mSuppressLastCollisionClear = false;
+            return returnValue;
+        }
+
+        public bool CollideAgainstMovePositionSoft(Polygon polygon, float thisMass, float otherMass, float separationVelocity)
+        {
+            mSuppressLastCollisionClear = true;
+            bool returnValue = false;
+
+            for (int i = 0; i < AxisAlignedRectangles.Count; i++)
+            {
+                returnValue |= polygon.CollideAgainstMovePositionSoft(AxisAlignedRectangles[i], otherMass, thisMass, separationVelocity);
+            }
+
+            for (int i = 0; i < Polygons.Count; i++)
+            {
+                returnValue |= polygon.CollideAgainstMovePositionSoft(Polygons[i], otherMass, thisMass, separationVelocity);
+            }
+
+            mSuppressLastCollisionClear = false;
+            return returnValue;
+        }
+
+        public bool CollideAgainstMovePositionSoft(AxisAlignedRectangle rectangle, float thisMass, float otherMass, float separationVelocity)
+        {
+            mSuppressLastCollisionClear = true;
+            bool returnValue = false;
+
+            for (int i = 0; i < AxisAlignedRectangles.Count; i++)
+            {
+                returnValue |= AxisAlignedRectangles[i].CollideAgainstMovePositionSoft(rectangle, thisMass, otherMass, separationVelocity);
+            }
+
+            for (int i = 0; i < Polygons.Count; i++)
+            {
+                returnValue |= Polygons[i].CollideAgainstMovePositionSoft(rectangle, thisMass, otherMass, separationVelocity);
             }
 
             mSuppressLastCollisionClear = false;

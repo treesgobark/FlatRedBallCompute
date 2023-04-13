@@ -201,7 +201,7 @@ namespace GlueControl.Editing
         #region Delegates/Events
 
         public Action<List<PropertyChangeArgs>> PropertyChanged;
-        public Action<INameable> ObjectSelected;
+        public Action<List<INameable>> ObjectSelected;
 
         #endregion
 
@@ -394,22 +394,28 @@ namespace GlueControl.Editing
 
 
                 // Vic says - not sure how much should be inside the IsActive check
-                if (FlatRedBallServices.Game.IsActive)
+                if (FlatRedBallServices.Game.IsActive && GuiManager.Cursor.IsInWindow())
                 {
-                    if (itemGrabbed == null && ItemsSelected.All(item => item is TileShapeCollection == false))
+                    if (itemGrabbed == null && ItemsSelected.All(item => item is TileShapeCollection == false) && FlatRedBall.Gui.GuiManager.Cursor.WindowOver == null)
                     {
                         SelectionLogic.DoDragSelectLogic();
                     }
                     SelectionLogic.GetItemsOver(itemsSelected, itemsOver, SelectedMarkers, GuiManager.Cursor.PrimaryDoublePush, ElementEditingMode);
                 }
-
+                else
+                {
+                    SelectionLogic.DoInactiveWindowLogic();
+                }
 
                 var didChangeItemOver = itemsOverLastFrame.Any(item => !itemsOver.Contains(item)) ||
                     itemsOver.Any(item => !itemsOverLastFrame.Contains(item));
 
                 if (FlatRedBallServices.Game.IsActive)
                 {
-                    DoGrabLogic();
+                    if (GuiManager.Cursor.IsInWindow())
+                    {
+                        DoGrabLogic();
+                    }
 
                     DoRectangleSelectLogic();
 
@@ -417,7 +423,10 @@ namespace GlueControl.Editing
 
                     DoHotkeyLogic();
 
-                    CameraLogic.DoCursorCameraControllingLogic();
+                    if(GuiManager.Cursor.IsInWindow())
+                    {
+                        CameraLogic.DoCursorCameraControllingLogic();
+                    }
 
                     DoForwardBackActivity();
                 }
@@ -534,7 +543,21 @@ namespace GlueControl.Editing
                         marker.CanMoveItem = item == itemGrabbed;
                     }
 
-                    ObjectSelected(itemGrabbed as INameable);
+                    if (!clickedOnSelectedItem)
+                    {
+                        if (isCtrlDown)
+                        {
+                            ObjectSelected(itemsSelected);
+                        }
+                        else
+                        {
+                            ObjectSelected(new List<INameable> { itemGrabbed as INameable });
+                        }
+                    }
+                }
+                else
+                {
+                    ObjectSelected(new List<INameable>());
                 }
             }
         }
@@ -743,8 +766,6 @@ namespace GlueControl.Editing
                         nos = CurrentGlueElement?.AllNamedObjects.FirstOrDefault(item => item.InstanceName == itemOver.Name);
                     }
 
-                    var didSelect = false;
-
                     if (nos != null)
                     {
                         var isEditingLocked =
@@ -753,27 +774,21 @@ namespace GlueControl.Editing
                         if (isEditingLocked == false)
                         {
                             Select(nos, addToExistingSelection: isFirst == false, playBump: true);
-                            didSelect = true;
                         }
                     }
                     else
                     {
                         // this shouldn't happen, but for now we tolerate it until the current is sent
                         Select(itemOver?.Name, addToExistingSelection: isFirst == false, playBump: true);
-                        didSelect = true;
                     }
 
-                    // This pushes the selection up for the first item so that Glue can match the selection. Eventually Glue will accept a list for multi-select, but not yet...
-                    if (isFirst && didSelect)
-                    {
-                        ObjectSelected(itemOver);
-                    }
 
                     isFirst = false;
                 }
+
+                ObjectSelected(ItemsOver.ToList());
             }
         }
-
         #endregion
 
         public void UpdateDependencies()
@@ -914,7 +929,28 @@ namespace GlueControl.Editing
 
         #region Selection
 
-        internal void Select(NamedObjectSave namedObject, bool addToExistingSelection = false, bool playBump = true, bool focusCameraOnObject = false)
+
+        internal void Select(IEnumerable<NamedObjectSave> namedObjects, bool addToExistingSelection = false, bool playBump = true, bool focusCameraOnObject = false)
+        {
+            var isFirst = true;
+            if (namedObjects.Count() == 0)
+            {
+                Select((NamedObjectSave)null, false, playBump, focusCameraOnObject, false);
+            }
+            else
+            {
+                foreach (var item in namedObjects)
+                {
+                    Select(item, addToExistingSelection || !isFirst, playBump, focusCameraOnObject, false);
+                    isFirst = false;
+                }
+            }
+
+
+            UpdateMarkers(didChangeItemOver: true);
+        }
+
+        internal void Select(NamedObjectSave namedObject, bool addToExistingSelection = false, bool playBump = true, bool focusCameraOnObject = false, bool updateMarkers = true)
         {
             if (addToExistingSelection == false)
             {
@@ -936,15 +972,15 @@ namespace GlueControl.Editing
                     CurrentNamedObjects.Add(namedObject);
                 }
 
-                Select(namedObject?.InstanceName, addToExistingSelection, playBump, focusCameraOnObject);
+                Select(namedObject?.InstanceName, addToExistingSelection, playBump, focusCameraOnObject, updateMarkers);
             }
             else
             {
-                Select((string)null, addToExistingSelection, playBump, focusCameraOnObject);
+                Select((string)null, addToExistingSelection, playBump, focusCameraOnObject, updateMarkers);
             }
         }
 
-        internal void Select(string objectName, bool addToExistingSelection = false, bool playBump = true, bool focusCameraOnObject = false)
+        internal void Select(string objectName, bool addToExistingSelection = false, bool playBump = true, bool focusCameraOnObject = false, bool updateMarkers = true)
         {
             INameable foundObject = string.IsNullOrEmpty(objectName)
                 ? null
@@ -985,8 +1021,11 @@ namespace GlueControl.Editing
                     MarkerFor(foundObject)?.PlayBumpAnimation(SelectedItemExtraPadding, isSynchronized: false);
                 }
 
-                // do this right away so the handles don't pop out of existance when changing selection
-                UpdateMarkers(didChangeItemOver: true);
+                if (updateMarkers)
+                {
+                    // do this right away so the handles don't pop out of existance when changing selection
+                    UpdateMarkers(didChangeItemOver: true);
+                }
 
             }
 
@@ -1089,9 +1128,9 @@ namespace GlueControl.Editing
 
         public void RaiseObjectSelected()
         {
-            if (ObjectSelected != null && ItemSelected != null)
+            if (ObjectSelected != null && ItemsSelected.Count() > 0)
             {
-                ObjectSelected(ItemSelected);
+                ObjectSelected(ItemsSelected.ToList());
             }
         }
 

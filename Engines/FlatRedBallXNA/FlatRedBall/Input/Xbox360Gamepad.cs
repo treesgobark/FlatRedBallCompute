@@ -178,8 +178,24 @@ namespace FlatRedBall.Input
                 if (LeftStick != null) LeftStick.DeadzoneType = value;
                 if (RightStick != null) RightStick.DeadzoneType = value;
             }
-        } 
-            
+        }
+
+        DeadzoneInterpolationType deadzoneInterpolation;
+        public DeadzoneInterpolationType DeadzoneInterpolation 
+        { 
+            get
+            {
+                return LeftStick?.DeadzoneInterpolation ??
+                    RightStick?.DeadzoneInterpolation ??
+                    deadzoneInterpolation;
+            }
+            set
+            {
+                deadzoneInterpolation = value;
+                if (LeftStick != null) LeftStick.DeadzoneInterpolation = value;
+                if (RightStick != null) RightStick.DeadzoneInterpolation = value;
+            }
+        }
 
         public I1DInput DPadHorizontal
         {
@@ -1144,7 +1160,9 @@ namespace FlatRedBall.Input
             // If this method is called multiple times per frame this line
             // of code guarantees that the user will get true every time until
             // the next TimeManager.Update (next frame).
-            bool repeatedThisFrame = mLastRepeatRate[(int)button] == TimeManager.CurrentTime;
+            // The very first frame of FRB would have CurrentTime == 0. 
+            // The repeat cannot happen on the first frame, so we check for that:
+            bool repeatedThisFrame = TimeManager.CurrentTime > 0 && mLastRepeatRate[(int)button] == TimeManager.CurrentTime;
 
             if (repeatedThisFrame ||
                 (

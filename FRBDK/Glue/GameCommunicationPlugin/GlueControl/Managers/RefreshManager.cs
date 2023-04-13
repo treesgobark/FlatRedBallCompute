@@ -281,7 +281,7 @@ namespace GameCommunicationPlugin.GlueControl.Managers
                         handled = true;
                     }
                 }
-                if (!handled)
+                if (!handled && GlueCommands.Self.FileCommands.IsContent(fileName))
                 {
                     CreateStopAndRestartTask($"File {fileName} changed");
                 }
@@ -315,7 +315,10 @@ namespace GameCommunicationPlugin.GlueControl.Managers
             {
                 return false;
             }
-
+            if(string.IsNullOrEmpty(filePath.Extension))
+            {
+                return false;
+            }
 
 
             return true;
@@ -680,7 +683,7 @@ namespace GameCommunicationPlugin.GlueControl.Managers
 
         #region Selected Object
 
-        internal async void HandleItemSelected(ITreeNode selectedTreeNode)
+        internal async void HandleItemSelected(List<ITreeNode> selectedTreeNodes)
         {
             if (IgnoreNextObjectSelect)
             {
@@ -715,10 +718,10 @@ namespace GameCommunicationPlugin.GlueControl.Managers
 
             var dto = new SelectObjectDto();
 
-            NamedObjectSave nos = null;
+            List<NamedObjectSave> namedObjects = new List<NamedObjectSave>();
             if (forcedElement == null)
             {
-                nos = GlueState.Self.CurrentNamedObjectSave;
+                namedObjects = GlueState.Self.CurrentNamedObjectSaves.ToList();
             }
 
             // Determine these values before resetting the LastDtoPushedToGame...
@@ -756,7 +759,8 @@ namespace GameCommunicationPlugin.GlueControl.Managers
                 if (canSend)
                 {
                     dto.BringIntoFocus = bringIntoFocus;
-                    dto.NamedObject = nos;
+                    dto.NamedObjects.Clear();
+                    dto.NamedObjects.AddRange(namedObjects);
                     dto.ElementNameGlue = element.Name;
                     dto.StateName = forcedStateName ??
                         GlueState.Self.CurrentStateSave?.Name;
@@ -1011,7 +1015,7 @@ namespace GameCommunicationPlugin.GlueControl.Managers
                         ViewModel.IsEditChecked = true;
                     }
 
-                }, nameof(CreateStopAndRestartTask), TaskExecutionPreference.AddOrMoveToEnd);
+                }, $"{nameof(CreateStopAndRestartTask)} : {reason}" , TaskExecutionPreference.AddOrMoveToEnd);
             }
         }
 

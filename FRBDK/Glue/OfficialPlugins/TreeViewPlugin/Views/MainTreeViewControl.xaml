@@ -75,6 +75,7 @@
                  SelectionChanged="Bookmarks_SelectionChanged"
                  KeyDown="Bookmarks_KeyDown"
                  LostFocus="Bookmarks_LostFocus"
+                 MouseDoubleClick="Bookmarks_MouseDoubleClick"
                  ItemsSource="{Binding Bookmarks}"
                  SelectedItem="{Binding SelectedBookmark}"
                  >
@@ -149,7 +150,7 @@
         <pt:TreeListBox x:Name="MainTreeView" 
                         Visibility="{Binding MainTreeViewVisibility}"
                         Grid.Row="4" 
-                        SelectionMode="Single" 
+                        SelectionMode="Extended"
                         AllowDrop="True"
                         VirtualizingStackPanel.IsVirtualizing="False" 
                         HierarchySource="{Binding VisibleRoot}"
@@ -163,6 +164,7 @@
                         DragLeave="MainTreeView_DragLeave"
                         Drop="MainTreeView_Drop"
                         DragEnter="MainTreeView_DragEnter"
+                        DragOver="MainTreeView_DragOver"
                         MouseDoubleClick="MainTreeView_MouseDoubleClick"
                         MouseMove="MainTreeView_MouseMove">
             

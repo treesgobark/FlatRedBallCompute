@@ -157,8 +157,8 @@ namespace GlueControl.Editing
                     }
                 }
             }
-
-            if (objectOver != null)
+            // If doing a rectangle selection, no need to also add the item over, it will be part of the rectangle:
+            else if (objectOver != null)
             {
                 itemsOverToFill.Add(objectOver);
             }
@@ -223,6 +223,11 @@ namespace GlueControl.Editing
                     PerformedRectangleSelection = LeftSelect != RightSelect && TopSelect != BottomSelect;
                 }
             }
+        }
+
+        public static void DoInactiveWindowLogic()
+        {
+            PerformedRectangleSelection = false;
         }
 
         public static IEnumerable<PositionedObject> GetAvailableObjects(ElementEditingMode elementEditingMode)

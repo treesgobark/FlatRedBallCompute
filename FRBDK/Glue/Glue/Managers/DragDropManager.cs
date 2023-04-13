@@ -718,9 +718,15 @@ namespace FlatRedBall.Glue.Managers
                 {
 
                     // make sure that the target list is the current
-                    GlueState.Self.CurrentNamedObjectSave = targetNamedObjectSave;
+                    // Update April 3, 2023
+                    // We are moving away from
+                    // requiring nodes to be selected
+                    // to perform operations. This is jarring
+                    // for the user, and can make async operations
+                    // fail.
+                    //GlueState.Self.CurrentNamedObjectSave = targetNamedObjectSave;
 
-                    var currentNosList = GlueState.Self.CurrentNamedObjectSave;
+                    var currentNosList = targetNamedObjectSave;
 
                     AddObjectViewModel viewModel = new AddObjectViewModel();
                     viewModel.SourceType = SourceType.Entity;
@@ -746,7 +752,8 @@ namespace FlatRedBall.Glue.Managers
 
 
                     // run after generated code so plugins like level editor work off latest code
-                    PluginManager.ReactToNewObject(namedObject);
+                    // this is handled by AddNewNamedObjectToAsync
+                    //PluginManager.ReactToNewObject(namedObject);
                     PluginManager.ReactToObjectContainerChanged(namedObject, currentNosList);
 
                     // Don't save the Glux, the caller of this method will take care of it

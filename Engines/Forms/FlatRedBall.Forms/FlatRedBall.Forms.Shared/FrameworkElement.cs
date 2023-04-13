@@ -641,12 +641,15 @@ namespace FlatRedBall.Forms.Controls
 
                     if (uiProperty.PropertyType == typeof(string))
                     {
-                        uiProperty.SetValue(this, vmValue?.ToString(), null);
+                        var stringToSet = vmValue?.ToString();
+                        uiProperty.SetValue(this, stringToSet, null);
                     }
                     else
                     {
                         try
                         {
+                            var convertedValue = GraphicalUiElement.ConvertValue(vmValue, uiProperty.PropertyType, null);
+
                             uiProperty.SetValue(this, vmValue, null);
                         }
                         catch (ArgumentException ae)
@@ -682,7 +685,9 @@ namespace FlatRedBall.Forms.Controls
 
                         try
                         {
-                            vmProperty.SetValue(BindingContext, uiValue, null);
+                            var convertedValue = GraphicalUiElement.ConvertValue(uiValue, vmProperty.PropertyType, null);
+
+                            vmProperty.SetValue(BindingContext, convertedValue, null);
                         }
                         catch(System.ArgumentException argumentException)
                         {
